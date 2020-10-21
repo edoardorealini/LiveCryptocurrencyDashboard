@@ -12,6 +12,7 @@ def retrieve_history(currency, log_file):
     tmstp = timestamp1gen2017
 
     while tmstp < timestamp_curr:
+        time.sleep(1)
         start_day = str(tmstp)
         end_day = str(tmstp + milliseconds_per_day)
 
@@ -25,7 +26,7 @@ def retrieve_history(currency, log_file):
 
         try:
             req = Request(final_url, headers={'User-Agent': 'Mozilla/5.0'})
-            response = urlopen(req, timeout=700).read()
+            response = urlopen(req, timeout=500).read()
             save_folder = "../data/history/" + currency + "/"
             json_file = save_folder + currency + "-" + start_day + ".json"      # example: bitcoin-1483228800000.json
 
@@ -35,6 +36,7 @@ def retrieve_history(currency, log_file):
 
         except (HTTPError, URLError) as e:
             log_file.write("Request for currency " + currency + " for day " + start_day + " failed!\tReason: " + e.reason + "\n")
+            print("ERROR at " + start_day + " for the following reason: " + e.reason)
 
         tmstp += milliseconds_per_day
 
