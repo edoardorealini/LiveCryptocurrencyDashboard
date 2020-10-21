@@ -1,0 +1,1826 @@
+
+Public
+ENVIRONMENT 
+LAYOUT 
+LANGUAGE 
+Example Response
+{
+  "data": [
+    {
+      "id": "bitcoin",
+      "rank": "1",
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "supply": "17193925.0000000000000000",
+      "maxSupply": "21000000.0000000000000000",
+      "marketCapUsd": "119150835874.4699281625807300",
+      "volumeUsd24Hr": "2927959461.1750323310959460",
+      "priceUsd": "6929.8217756835584756",
+      "changePercent24Hr": "-0.8101417214350335",
+      "vwap24Hr": "7175.0663247679233209"
+    },
+    {
+      "id": "ethereum",
+      "rank": "2",
+      "symbol": "ETH",
+      "name": "Ethereum",
+      "supply": "101160540.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "40967739219.6612727047843840",
+      "volumeUsd24Hr": "1026669440.6451482672850841",
+      "priceUsd": "404.9774667045200896",
+      "changePercent24Hr": "-0.0999626159535347",
+      "vwap24Hr": "415.3288028454417241"
+    },
+    {
+      "id": "ripple",
+      "rank": "3",
+      "symbol": "XRP",
+      "name": "XRP",
+      "supply": "39299874590.0000000000000000",
+      "maxSupply": "100000000000.0000000000000000",
+      "marketCapUsd": "16517228249.2902868380922380",
+      "volumeUsd24Hr": "149328134.5032677889393019",
+      "priceUsd": "0.4202870472643482",
+      "changePercent24Hr": "-1.9518258685302665",
+      "vwap24Hr": "0.4318239230821224"
+    },
+    {
+      "id": "bitcoin-cash",
+      "rank": "4",
+      "symbol": "BCH",
+      "name": "Bitcoin Cash",
+      "supply": "17278438.0000000000000000",
+      "maxSupply": "21000000.0000000000000000",
+      "marketCapUsd": "11902454455.1536127997298894",
+      "volumeUsd24Hr": "287075418.5202079328968427",
+      "priceUsd": "688.8617162705108413",
+      "changePercent24Hr": "-1.5016094894459434",
+      "vwap24Hr": "711.6276356693412774"
+    },
+    {
+      "id": "eos",
+      "rank": "5",
+      "symbol": "EOS",
+      "name": "EOS",
+      "supply": "906245118.0000000000000000",
+      "maxSupply": "1000000000.0000000000000000",
+      "marketCapUsd": "6327688685.5053582732768780",
+      "volumeUsd24Hr": "373717579.0872289136334689",
+      "priceUsd": "6.9823147841833210",
+      "changePercent24Hr": "-0.2487845516123365",
+      "vwap24Hr": "7.0345139617072947"
+    },
+    {
+      "id": "stellar",
+      "rank": "6",
+      "symbol": "XLM",
+      "name": "Stellar",
+      "supply": "18770261348.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "4395265468.8039656236913164",
+      "volumeUsd24Hr": "28186508.6814478496347773",
+      "priceUsd": "0.2341611226032443",
+      "changePercent24Hr": "-3.4735437955390772",
+      "vwap24Hr": "0.2412082330289685"
+    },
+    {
+      "id": "litecoin",
+      "rank": "7",
+      "symbol": "LTC",
+      "name": "Litecoin",
+      "supply": "57731482.0000000000000000",
+      "maxSupply": "84000000.0000000000000000",
+      "marketCapUsd": "4234484929.6430299360674272",
+      "volumeUsd24Hr": "226037979.6802283949921417",
+      "priceUsd": "73.3479339685586096",
+      "changePercent24Hr": "-1.3117992300270579",
+      "vwap24Hr": "75.1659221835912383"
+    },
+    {
+      "id": "cardano",
+      "rank": "8",
+      "symbol": "ADA",
+      "name": "Cardano",
+      "supply": "25927070538.0000000000000000",
+      "maxSupply": "45000000000.0000000000000000",
+      "marketCapUsd": "3342664439.1225859377289638",
+      "volumeUsd24Hr": "32741914.1355823452856056",
+      "priceUsd": "0.1289256506716951",
+      "changePercent24Hr": "0.0079476596654900",
+      "vwap24Hr": "0.1310244403993645"
+    },
+    {
+      "id": "tether",
+      "rank": "9",
+      "symbol": "USDT",
+      "name": "Tether",
+      "supply": "2437140346.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "2439361941.9836262753306976",
+      "volumeUsd24Hr": "2257075318.3468977492592858",
+      "priceUsd": "1.0009115584940656",
+      "changePercent24Hr": "0.1166673925934855",
+      "vwap24Hr": "1.0089194093830538"
+    },
+    {
+      "id": "iota",
+      "rank": "10",
+      "symbol": "MIOTA",
+      "name": "IOTA",
+      "supply": "2779530283.0000000000000000",
+      "maxSupply": "2779530283.0000000000000000",
+      "marketCapUsd": "2403573545.0265314556170093",
+      "volumeUsd24Hr": "39603276.8327675426897915",
+      "priceUsd": "0.8647409095440071",
+      "changePercent24Hr": "-5.2486878154413840",
+      "vwap24Hr": "0.8988184197561133"
+    },
+    {
+      "id": "tron",
+      "rank": "11",
+      "symbol": "TRX",
+      "name": "TRON",
+      "supply": "65748111645.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "1917190870.7283154920500970",
+      "volumeUsd24Hr": "97380139.3492488689277134",
+      "priceUsd": "0.0291596339843186",
+      "changePercent24Hr": "-1.4317319488825126",
+      "vwap24Hr": "0.0298449568758824"
+    },
+    {
+      "id": "ethereum-classic",
+      "rank": "12",
+      "symbol": "ETC",
+      "name": "Ethereum Classic",
+      "supply": "103587261.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "1872331046.2321777062805653",
+      "volumeUsd24Hr": "271312448.7837505736339966",
+      "priceUsd": "18.0749160481439673",
+      "changePercent24Hr": "7.9255849247329682",
+      "vwap24Hr": "17.7522606149076111"
+    },
+    {
+      "id": "monero",
+      "rank": "13",
+      "symbol": "XMR",
+      "name": "Monero",
+      "supply": "16266706.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "1859277791.0153721203827764",
+      "volumeUsd24Hr": "18264886.3953255107108103",
+      "priceUsd": "114.2995878216137994",
+      "changePercent24Hr": "-1.6999607633523112",
+      "vwap24Hr": "116.6537590537407372"
+    },
+    {
+      "id": "neo",
+      "rank": "14",
+      "symbol": "NEO",
+      "name": "NEO",
+      "supply": "65000000.0000000000000000",
+      "maxSupply": "100000000.0000000000000000",
+      "marketCapUsd": "1715338547.8519569500000000",
+      "volumeUsd24Hr": "45167493.9521492713845788",
+      "priceUsd": "26.3898238131070300",
+      "changePercent24Hr": "-3.8257893431296119",
+      "vwap24Hr": "27.3569824306887655"
+    },
+    {
+      "id": "dash",
+      "rank": "15",
+      "symbol": "DASH",
+      "name": "Dash",
+      "supply": "8242673.0000000000000000",
+      "maxSupply": "18900000.0000000000000000",
+      "marketCapUsd": "1670555643.8854250757627516",
+      "volumeUsd24Hr": "181128160.3807899897235348",
+      "priceUsd": "202.6715901365279292",
+      "changePercent24Hr": "-1.2160970272440424",
+      "vwap24Hr": "210.5909154125158495"
+    },
+    {
+      "id": "binance-coin",
+      "rank": "16",
+      "symbol": "BNB",
+      "name": "Binance Coin",
+      "supply": "95512523.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "1305935869.8397628547476407",
+      "volumeUsd24Hr": "42172812.7116138931680502",
+      "priceUsd": "13.6729282069091909",
+      "changePercent24Hr": "1.3520513306937922",
+      "vwap24Hr": "13.6841366919151358"
+    },
+    {
+      "id": "nem",
+      "rank": "17",
+      "symbol": "XEM",
+      "name": "NEM",
+      "supply": "8999999999.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "1269169652.9010324496619943",
+      "volumeUsd24Hr": "4899881.5009537457724066",
+      "priceUsd": "0.1410188503380057",
+      "changePercent24Hr": "-2.4429786112286243",
+      "vwap24Hr": "0.1440137611821482"
+    },
+    {
+      "id": "tezos",
+      "rank": "18",
+      "symbol": "XTZ",
+      "name": "Tezos",
+      "supply": "607489041.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "1119073134.2173565940268839",
+      "volumeUsd24Hr": "2154328.9429299077638154",
+      "priceUsd": "1.8421289252810679",
+      "changePercent24Hr": "-0.6730653085172552",
+      "vwap24Hr": "1.8783587451745926"
+    },
+    {
+      "id": "zcash",
+      "rank": "19",
+      "symbol": "ZEC",
+      "name": "Zcash",
+      "supply": "4517456.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "804991269.4445417488659264",
+      "volumeUsd24Hr": "75632617.7903448306763952",
+      "priceUsd": "178.1957078153150244",
+      "changePercent24Hr": "0.6169476309658727",
+      "vwap24Hr": "184.8225603649674135"
+    },
+    {
+      "id": "omisego",
+      "rank": "20",
+      "symbol": "OMG",
+      "name": "OmiseGO",
+      "supply": "140245398.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "739777497.6916407099359196",
+      "volumeUsd24Hr": "20694921.2361962200435087",
+      "priceUsd": "5.2748789496225802",
+      "changePercent24Hr": "-2.2531646774084197",
+      "vwap24Hr": "5.3958775584852030"
+    },
+    {
+      "id": "vechain",
+      "rank": "21",
+      "symbol": "VET",
+      "name": "VeChain",
+      "supply": "55454734800.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "730276372.3133622965097600",
+      "volumeUsd24Hr": "57802881.8972676445413466",
+      "priceUsd": "0.0131688732251112",
+      "changePercent24Hr": null,
+      "vwap24Hr": "0.0132266655221957"
+    },
+    {
+      "id": "qtum",
+      "rank": "22",
+      "symbol": "QTUM",
+      "name": "Qtum",
+      "supply": "88796204.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "573625594.6178153624893504",
+      "volumeUsd24Hr": "156319311.0873804533483434",
+      "priceUsd": "6.4600238386070576",
+      "changePercent24Hr": "1.0270219525809853",
+      "vwap24Hr": "6.4498458234906876"
+    },
+    {
+      "id": "0x",
+      "rank": "23",
+      "symbol": "ZRX",
+      "name": "0x",
+      "supply": "537089727.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "515321476.5383629398717507",
+      "volumeUsd24Hr": "9598473.7174272154618385",
+      "priceUsd": "0.9594699928758141",
+      "changePercent24Hr": "0.3051381482832494",
+      "vwap24Hr": "0.9779612524256618"
+    },
+    {
+      "id": "bitcoin-gold",
+      "rank": "24",
+      "symbol": "BTG",
+      "name": "Bitcoin Gold",
+      "supply": "17163736.0000000000000000",
+      "maxSupply": "21000000.0000000000000000",
+      "marketCapUsd": "433647931.3384921696270528",
+      "volumeUsd24Hr": "11717587.1871555387759917",
+      "priceUsd": "25.2653578066274248",
+      "changePercent24Hr": "2.5693900833876112",
+      "vwap24Hr": "26.1767191632804568"
+    },
+    {
+      "id": "bytecoin-bcn",
+      "rank": "25",
+      "symbol": "BCN",
+      "name": "Bytecoin",
+      "supply": "183890481254.0000000000000000",
+      "maxSupply": "184470000000.0000000000000000",
+      "marketCapUsd": "422267554.4392267686273482",
+      "volumeUsd24Hr": "4255953.8830059068978630",
+      "priceUsd": "0.0022962991426183",
+      "changePercent24Hr": "-2.0555072080918497",
+      "vwap24Hr": "0.0023396666839876"
+    },
+    {
+      "id": "bitshares",
+      "rank": "26",
+      "symbol": "BTS",
+      "name": "BitShares",
+      "supply": "2648020000.0000000000000000",
+      "maxSupply": "3600570502.0000000000000000",
+      "marketCapUsd": "417946480.6234385711480000",
+      "volumeUsd24Hr": "3707830.5197623489175103",
+      "priceUsd": "0.1578335815527974",
+      "changePercent24Hr": "-0.5262835077445962",
+      "vwap24Hr": "0.1597890049426776"
+    },
+    {
+      "id": "lisk",
+      "rank": "27",
+      "symbol": "LSK",
+      "name": "Lisk",
+      "supply": "108771342.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "406966841.7210789774942900",
+      "volumeUsd24Hr": "1495684.7685767094905622",
+      "priceUsd": "3.7414895710404950",
+      "changePercent24Hr": "0.2676372239299769",
+      "vwap24Hr": "3.7890760354859084"
+    },
+    {
+      "id": "decred",
+      "rank": "28",
+      "symbol": "DCR",
+      "name": "Decred",
+      "supply": "8150941.0000000000000000",
+      "maxSupply": "21000000.0000000000000000",
+      "marketCapUsd": "399566939.1335277742394306",
+      "volumeUsd24Hr": "742823.4876721636836696",
+      "priceUsd": "49.0209583327284266",
+      "changePercent24Hr": "-3.2642054686048279",
+      "vwap24Hr": "50.2224198596715007"
+    },
+    {
+      "id": "zilliqa",
+      "rank": "29",
+      "symbol": "ZIL",
+      "name": "Zilliqa",
+      "supply": "7576552268.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "394170050.7228807508347008",
+      "volumeUsd24Hr": "10393150.0125241421327108",
+      "priceUsd": "0.0520249893065056",
+      "changePercent24Hr": "-6.9792790325803250",
+      "vwap24Hr": "0.0548851668338597"
+    },
+    {
+      "id": "aeternity",
+      "rank": "30",
+      "symbol": "AE",
+      "name": "Aeternity",
+      "supply": "233020472.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "389265810.5936745673473128",
+      "volumeUsd24Hr": "1099886.6219079596878219",
+      "priceUsd": "1.6705219384916299",
+      "changePercent24Hr": "-0.1639744803568052",
+      "vwap24Hr": "1.6844896775254869"
+    },
+    {
+      "id": "maker",
+      "rank": "31",
+      "symbol": "MKR",
+      "name": "Maker",
+      "supply": "668228.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "362174148.2486876620349236",
+      "volumeUsd24Hr": "94986.3556259988826383",
+      "priceUsd": "541.9918773961696637",
+      "changePercent24Hr": "0.3297072034012423",
+      "vwap24Hr": "558.5803155518918807"
+    },
+    {
+      "id": "digibyte",
+      "rank": "32",
+      "symbol": "DGB",
+      "name": "DigiByte",
+      "supply": "10624492697.0000000000000000",
+      "maxSupply": "21000000000.0000000000000000",
+      "marketCapUsd": "345861512.3743326610994476",
+      "volumeUsd24Hr": "2252060.5479466742976501",
+      "priceUsd": "0.0325532260445708",
+      "changePercent24Hr": "-3.7821030033445045",
+      "vwap24Hr": "0.0336746825200132"
+    },
+    {
+      "id": "icon",
+      "rank": "33",
+      "symbol": "ICX",
+      "name": "ICON",
+      "supply": "387431340.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "336647581.4918699838518460",
+      "volumeUsd24Hr": "10246440.8816857116815707",
+      "priceUsd": "0.8689219139883469",
+      "changePercent24Hr": "-1.4593634038211800",
+      "vwap24Hr": "0.8907662502506986"
+    },
+    {
+      "id": "ontology",
+      "rank": "34",
+      "symbol": "ONT",
+      "name": "Ontology",
+      "supply": "151292175.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "329614007.8027348970092650",
+      "volumeUsd24Hr": "20815602.1111482899364173",
+      "priceUsd": "2.1786586636270838",
+      "changePercent24Hr": "-5.1706528252374729",
+      "vwap24Hr": "2.2785516620578982"
+    },
+    {
+      "id": "dogecoin",
+      "rank": "35",
+      "symbol": "DOGE",
+      "name": "Dogecoin",
+      "supply": "115599992371.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "320785454.3324311133443532",
+      "volumeUsd24Hr": "18345423.2697849500788752",
+      "priceUsd": "0.0027749608607492",
+      "changePercent24Hr": "-2.2041301982361082",
+      "vwap24Hr": "0.0028637064302935"
+    },
+    {
+      "id": "augur",
+      "rank": "36",
+      "symbol": "REP",
+      "name": "Augur",
+      "supply": "11000000.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "307435125.8113090923000000",
+      "volumeUsd24Hr": "1633833.6113244628248682",
+      "priceUsd": "27.9486478010280993",
+      "changePercent24Hr": "-3.1954136138959638",
+      "vwap24Hr": "28.5695396097705894"
+    },
+    {
+      "id": "steem",
+      "rank": "37",
+      "symbol": "STEEM",
+      "name": "Steem",
+      "supply": "269599603.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "307107617.7867842981216744",
+      "volumeUsd24Hr": "648653.8548940268140290",
+      "priceUsd": "1.1391248887958648",
+      "changePercent24Hr": "-1.4662219938469295",
+      "vwap24Hr": "1.1655407336474012"
+    },
+    {
+      "id": "moac",
+      "rank": "38",
+      "symbol": "MOAC",
+      "name": "MOAC",
+      "supply": "62463334.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "281872321.0045674905939370",
+      "volumeUsd24Hr": "817818.2273507963123477",
+      "priceUsd": "4.5126044825684055",
+      "changePercent24Hr": "14.3297316914054104",
+      "vwap24Hr": "4.0566389758312548"
+    },
+    {
+      "id": "verge",
+      "rank": "39",
+      "symbol": "XVG",
+      "name": "Verge",
+      "supply": "15172086051.0000000000000000",
+      "maxSupply": "16555000000.0000000000000000",
+      "marketCapUsd": "277548624.7498176222980502",
+      "volumeUsd24Hr": "2380407.8926965881478061",
+      "priceUsd": "0.0182933726988402",
+      "changePercent24Hr": "-2.8568436562089328",
+      "vwap24Hr": "0.0187244970182790"
+    },
+    {
+      "id": "siacoin",
+      "rank": "40",
+      "symbol": "SC",
+      "name": "Siacoin",
+      "supply": "36106704972.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "268774520.9065852812486012",
+      "volumeUsd24Hr": "2237738.9267974725973983",
+      "priceUsd": "0.0074438950082821",
+      "changePercent24Hr": "-5.1785014429247339",
+      "vwap24Hr": "0.0077444971234684"
+    },
+    {
+      "id": "bytom",
+      "rank": "41",
+      "symbol": "BTM",
+      "name": "Bytom",
+      "supply": "1002499275.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "265163301.3539633821506975",
+      "volumeUsd24Hr": "5982518.9308753912905738",
+      "priceUsd": "0.2645022375242749",
+      "changePercent24Hr": "-2.8144283483243033",
+      "vwap24Hr": "0.2706164966844429"
+    },
+    {
+      "id": "basic-attention-token",
+      "rank": "42",
+      "symbol": "BAT",
+      "name": "Basic Attention Token",
+      "supply": "1000000000.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "264936358.1578430000000000",
+      "volumeUsd24Hr": "164590.5313217090910089",
+      "priceUsd": "0.2649363581578430",
+      "changePercent24Hr": "6.1932953036212389",
+      "vwap24Hr": "0.2592984829824833"
+    },
+    {
+      "id": "bitcoin-diamond",
+      "rank": "43",
+      "symbol": "BCD",
+      "name": "Bitcoin Diamond",
+      "supply": "153756875.0000000000000000",
+      "maxSupply": "210000000.0000000000000000",
+      "marketCapUsd": "252123329.4525309151610625",
+      "volumeUsd24Hr": "538310.7081966816537083",
+      "priceUsd": "1.6397532107265507",
+      "changePercent24Hr": "2.1792475264166973",
+      "vwap24Hr": "1.6278220034596976"
+    },
+    {
+      "id": "hshare",
+      "rank": "44",
+      "symbol": "HSR",
+      "name": "Hshare",
+      "supply": "43323333.0000000000000000",
+      "maxSupply": "84000000.0000000000000000",
+      "marketCapUsd": "232058661.9562985894784729",
+      "volumeUsd24Hr": "64186071.0521661063264633",
+      "priceUsd": "5.3564360331255813",
+      "changePercent24Hr": "4.3539035086237439",
+      "vwap24Hr": "5.2452157557375355"
+    },
+    {
+      "id": "rchain",
+      "rank": "45",
+      "symbol": "RHOC",
+      "name": "RChain",
+      "supply": "361099945.0000000000000000",
+      "maxSupply": "1000000000.0000000000000000",
+      "marketCapUsd": "219970097.8444053721869915",
+      "volumeUsd24Hr": "128285.1468322898304122",
+      "priceUsd": "0.6091667996360547",
+      "changePercent24Hr": "-0.5561441560582823",
+      "vwap24Hr": "0.6114790859341345"
+    },
+    {
+      "id": "golem-network-tokens",
+      "rank": "46",
+      "symbol": "GNT",
+      "name": "Golem",
+      "supply": "959242000.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "209718325.2102373889004000",
+      "volumeUsd24Hr": "1643937.5840012151973083",
+      "priceUsd": "0.2186292147448062",
+      "changePercent24Hr": "-3.2081319916306145",
+      "vwap24Hr": "0.2232147184981977"
+    },
+    {
+      "id": "kucoin-shares",
+      "rank": "47",
+      "symbol": "KCS",
+      "name": "KuCoin Shares",
+      "supply": "90730576.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "208049786.9748942105371440",
+      "volumeUsd24Hr": "213377.5736343215848629",
+      "priceUsd": "2.2930504373177815",
+      "changePercent24Hr": "1.5528238782186799",
+      "vwap24Hr": "2.2553825929774339"
+    },
+    {
+      "id": "nano",
+      "rank": "48",
+      "symbol": "NANO",
+      "name": "Nano",
+      "supply": "133248289.0000000000000000",
+      "maxSupply": "133248290.0000000000000000",
+      "marketCapUsd": "205968167.0764489695642005",
+      "volumeUsd24Hr": "3084529.8154372921832982",
+      "priceUsd": "1.5457471808621045",
+      "changePercent24Hr": "-2.5616732989099506",
+      "vwap24Hr": "1.5872950846437558"
+    },
+    {
+      "id": "stratis",
+      "rank": "49",
+      "symbol": "STRAT",
+      "name": "Stratis",
+      "supply": "98963579.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "194989762.8248576070185121",
+      "volumeUsd24Hr": "670493.8448625813196424",
+      "priceUsd": "1.9703184221425299",
+      "changePercent24Hr": "-1.2059809152757320",
+      "vwap24Hr": "2.0229156315134080"
+    },
+    {
+      "id": "status",
+      "rank": "50",
+      "symbol": "SNT",
+      "name": "Status",
+      "supply": "3470483788.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "186349157.5335836721385984",
+      "volumeUsd24Hr": "2581952.1824205478155496",
+      "priceUsd": "0.0536954410154368",
+      "changePercent24Hr": "-1.3580920599893481",
+      "vwap24Hr": "0.0544008032901244"
+    },
+    {
+      "id": "pundi-x",
+      "rank": "51",
+      "symbol": "NPXS",
+      "name": "Pundi X",
+      "supply": "98675582989.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "185791030.8470743109064356",
+      "volumeUsd24Hr": "3073060.5948328822165675",
+      "priceUsd": "0.0018828470551604",
+      "changePercent24Hr": "-7.4008297527928869",
+      "vwap24Hr": "0.0019851230041591"
+    },
+    {
+      "id": "waves",
+      "rank": "52",
+      "symbol": "WAVES",
+      "name": "Waves",
+      "supply": "100000000.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "182005008.4923123700000000",
+      "volumeUsd24Hr": "1177695.1115814441627547",
+      "priceUsd": "1.8200500849231237",
+      "changePercent24Hr": "-0.8902103734640369",
+      "vwap24Hr": "1.8649567477842880"
+    },
+    {
+      "id": "populous",
+      "rank": "53",
+      "symbol": "PPT",
+      "name": "Populous",
+      "supply": "37004027.0000000000000000",
+      "maxSupply": "53252246.0000000000000000",
+      "marketCapUsd": "171935814.5452743936310956",
+      "volumeUsd24Hr": "2206033.4390204788790279",
+      "priceUsd": "4.6464082016066628",
+      "changePercent24Hr": "-2.2290158033897098",
+      "vwap24Hr": "4.7003523022319018"
+    },
+    {
+      "id": "mithril",
+      "rank": "54",
+      "symbol": "MITH",
+      "name": "Mithril",
+      "supply": "356761850.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "171913204.8520971255014550",
+      "volumeUsd24Hr": "25578790.4238833446714275",
+      "priceUsd": "0.4818710432522343",
+      "changePercent24Hr": "-3.6615959553613196",
+      "vwap24Hr": "0.4986312996096304"
+    },
+    {
+      "id": "iostoken",
+      "rank": "55",
+      "symbol": "IOST",
+      "name": "IOST",
+      "supply": "8400000000.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "167045349.3122668800000000",
+      "volumeUsd24Hr": "8910277.0416734034413525",
+      "priceUsd": "0.0198863511086032",
+      "changePercent24Hr": "-2.3249930192433910",
+      "vwap24Hr": "0.0204211850490141"
+    },
+    {
+      "id": "maidsafecoin",
+      "rank": "56",
+      "symbol": "MAID",
+      "name": "MaidSafeCoin",
+      "supply": "452552412.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "159579149.7307525657571328",
+      "volumeUsd24Hr": "2461874.0925463152956217",
+      "priceUsd": "0.3526202612102144",
+      "changePercent24Hr": "-1.3880404059640993",
+      "vwap24Hr": "0.3607928701264444"
+    },
+    {
+      "id": "komodo",
+      "rank": "57",
+      "symbol": "KMD",
+      "name": "Komodo",
+      "supply": "108769116.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "153364994.8559193231711168",
+      "volumeUsd24Hr": "786406.7959907650615585",
+      "priceUsd": "1.4100049765589648",
+      "changePercent24Hr": "-3.3548964227320894",
+      "vwap24Hr": "1.4834462254281689"
+    },
+    {
+      "id": "digixdao",
+      "rank": "58",
+      "symbol": "DGD",
+      "name": "DigixDAO",
+      "supply": "2000000.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "151689080.5143534210000000",
+      "volumeUsd24Hr": "346732.7587692120000982",
+      "priceUsd": "75.8445402571767105",
+      "changePercent24Hr": "-2.2138859653960230",
+      "vwap24Hr": "76.9497996441362853"
+    },
+    {
+      "id": "waltonchain",
+      "rank": "59",
+      "symbol": "WTC",
+      "name": "Waltonchain",
+      "supply": "40144099.0000000000000000",
+      "maxSupply": "100000000.0000000000000000",
+      "marketCapUsd": "143083379.1243209821870857",
+      "volumeUsd24Hr": "2813155.3761711942668076",
+      "priceUsd": "3.5642443768465443",
+      "changePercent24Hr": "-2.5710046720407544",
+      "vwap24Hr": "3.7235501926558936"
+    },
+    {
+      "id": "huobi-token",
+      "rank": "60",
+      "symbol": "HT",
+      "name": "Huobi Token",
+      "supply": "50000200.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "139519315.4389462156670400",
+      "volumeUsd24Hr": "67683771.1842002332627207",
+      "priceUsd": "2.7903751472783352",
+      "changePercent24Hr": "-1.5337216144965465",
+      "vwap24Hr": "2.8189877798979572"
+    },
+    {
+      "id": "gxchain",
+      "rank": "61",
+      "symbol": "GXS",
+      "name": "GXChain",
+      "supply": "60000000.0000000000000000",
+      "maxSupply": "100000000.0000000000000000",
+      "marketCapUsd": "135161163.7804198800000000",
+      "volumeUsd24Hr": "620577.9876739364543355",
+      "priceUsd": "2.2526860630069980",
+      "changePercent24Hr": "-1.7277882256746524",
+      "vwap24Hr": "2.2951271029889187"
+    },
+    {
+      "id": "kin",
+      "rank": "62",
+      "symbol": "KIN",
+      "name": "Kin",
+      "supply": "756097560976.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "132684771.8741489702677808",
+      "volumeUsd24Hr": "67243.8354616063224950",
+      "priceUsd": "0.0001754863111883",
+      "changePercent24Hr": "-4.0511401986267456",
+      "vwap24Hr": "0.0001804298581074"
+    },
+    {
+      "id": "aelf",
+      "rank": "63",
+      "symbol": "ELF",
+      "name": "aelf",
+      "supply": "250000000.0000000000000000",
+      "maxSupply": "1000000000.0000000000000000",
+      "marketCapUsd": "132302259.9204033000000000",
+      "volumeUsd24Hr": "9036646.3653808768850682",
+      "priceUsd": "0.5292090396816132",
+      "changePercent24Hr": "-1.2459617653184868",
+      "vwap24Hr": "0.5444628599889620"
+    },
+    {
+      "id": "ardor",
+      "rank": "64",
+      "symbol": "ARDR",
+      "name": "Ardor",
+      "supply": "998999495.0000000000000000",
+      "maxSupply": "998999495.0000000000000000",
+      "marketCapUsd": "130809624.1632448032127870",
+      "volumeUsd24Hr": "779193.3678637979094106",
+      "priceUsd": "0.1309406309191826",
+      "changePercent24Hr": "-1.3296645232046982",
+      "vwap24Hr": "0.1334965473513278"
+    },
+    {
+      "id": "wanchain",
+      "rank": "65",
+      "symbol": "WAN",
+      "name": "Wanchain",
+      "supply": "106152493.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "121811849.7958141906473666",
+      "volumeUsd24Hr": "1739526.0431106298943591",
+      "priceUsd": "1.1475175603818762",
+      "changePercent24Hr": "0.0182488448322047",
+      "vwap24Hr": "1.1515833525508547"
+    },
+    {
+      "id": "metaverse",
+      "rank": "66",
+      "symbol": "ETP",
+      "name": "Metaverse ETP",
+      "supply": "48494751.0000000000000000",
+      "maxSupply": "100000000.0000000000000000",
+      "marketCapUsd": "116610350.4187526736171894",
+      "volumeUsd24Hr": "3493902.0618696470110404",
+      "priceUsd": "2.4045973639240394",
+      "changePercent24Hr": "-3.9337193467206565",
+      "vwap24Hr": "2.4545148633235385"
+    },
+    {
+      "id": "monacoin",
+      "rank": "67",
+      "symbol": "MONA",
+      "name": "MonaCoin",
+      "supply": "61375725.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "112986302.4189140836943250",
+      "volumeUsd24Hr": "325158.0324338155043458",
+      "priceUsd": "1.8408956052073370",
+      "changePercent24Hr": "1.0368332863378881",
+      "vwap24Hr": "1.8869978956617953"
+    },
+    {
+      "id": "aion",
+      "rank": "68",
+      "symbol": "AION",
+      "name": "Aion",
+      "supply": "188769272.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "109649133.1352057367002960",
+      "volumeUsd24Hr": "654066.0291808204837648",
+      "priceUsd": "0.5808632515953430",
+      "changePercent24Hr": "-3.6308401771785606",
+      "vwap24Hr": "0.6072520603240054"
+    },
+    {
+      "id": "dentacoin",
+      "rank": "69",
+      "symbol": "DCN",
+      "name": "Dentacoin",
+      "supply": "325226613094.0000000000000000",
+      "maxSupply": "8000000000000.0000000000000000",
+      "marketCapUsd": "107538680.0729275456888386",
+      "volumeUsd24Hr": "52250.5298159580460730",
+      "priceUsd": "0.0003306576883419",
+      "changePercent24Hr": "-2.0144123261513356",
+      "vwap24Hr": "0.0003348509322483"
+    },
+    {
+      "id": "funfair",
+      "rank": "70",
+      "symbol": "FUN",
+      "name": "FunFair",
+      "supply": "5010848189.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "105186184.9287548970766606",
+      "volumeUsd24Hr": "328347.9666217929273727",
+      "priceUsd": "0.0209916926159654",
+      "changePercent24Hr": "-2.2497285144127781",
+      "vwap24Hr": "0.0215973406460219"
+    },
+    {
+      "id": "bancor",
+      "rank": "71",
+      "symbol": "BNT",
+      "name": "Bancor",
+      "supply": "51383579.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "103296927.3772498192029939",
+      "volumeUsd24Hr": "502157.2622322295811366",
+      "priceUsd": "2.0103100910360841",
+      "changePercent24Hr": "-0.2177732577683970",
+      "vwap24Hr": "2.0324005126639120"
+    },
+    {
+      "id": "zencash",
+      "rank": "72",
+      "symbol": "ZEN",
+      "name": "ZenCash",
+      "supply": "4438300.0000000000000000",
+      "maxSupply": "21000000.0000000000000000",
+      "marketCapUsd": "101907887.6866685795991900",
+      "volumeUsd24Hr": "533765.7559695958817985",
+      "priceUsd": "22.9610183373518193",
+      "changePercent24Hr": "2.5198653750872103",
+      "vwap24Hr": "23.0470872524489417"
+    },
+    {
+      "id": "holo",
+      "rank": "73",
+      "symbol": "HOT",
+      "name": "Holo",
+      "supply": "133214575156.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "101433265.4391675968476192",
+      "volumeUsd24Hr": "17390867.4435369098121392",
+      "priceUsd": "0.0007614276840232",
+      "changePercent24Hr": "35.8057439897742578",
+      "vwap24Hr": "0.0007269161378953"
+    },
+    {
+      "id": "decentraland",
+      "rank": "74",
+      "symbol": "MANA",
+      "name": "Decentraland",
+      "supply": "1050141509.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "100992774.9760223998901704",
+      "volumeUsd24Hr": "3778646.6679480914380230",
+      "priceUsd": "0.0961706342530856",
+      "changePercent24Hr": "-2.1982404348911394",
+      "vwap24Hr": "0.0967817453351617"
+    },
+    {
+      "id": "bitcoin-private",
+      "rank": "75",
+      "symbol": "BTCP",
+      "name": "Bitcoin Private",
+      "supply": "20508578.0000000000000000",
+      "maxSupply": "21000000.0000000000000000",
+      "marketCapUsd": "99677823.1358207694220508",
+      "volumeUsd24Hr": "158550.1145218121328316",
+      "priceUsd": "4.8602990970812686",
+      "changePercent24Hr": "-3.6566530751819224",
+      "vwap24Hr": "4.9190608636977214"
+    },
+    {
+      "id": "nebulas-token",
+      "rank": "76",
+      "symbol": "NAS",
+      "name": "Nebulas",
+      "supply": "45500000.0000000000000000",
+      "maxSupply": "100000000.0000000000000000",
+      "marketCapUsd": "99544041.8246613703000000",
+      "volumeUsd24Hr": "15238269.0030031019760866",
+      "priceUsd": "2.1877811390035466",
+      "changePercent24Hr": "-3.3627449665099304",
+      "vwap24Hr": "2.2695579970340772"
+    },
+    {
+      "id": "monaco",
+      "rank": "77",
+      "symbol": "MCO",
+      "name": "MCO",
+      "supply": "15793831.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "98324651.3985535316023110",
+      "volumeUsd24Hr": "7565911.2606686271494719",
+      "priceUsd": "6.2255099094420810",
+      "changePercent24Hr": "-1.4139899726562782",
+      "vwap24Hr": "6.4029258167363177"
+    },
+    {
+      "id": "emercoin",
+      "rank": "78",
+      "symbol": "EMC",
+      "name": "Emercoin",
+      "supply": "42106745.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "97801748.8192254082514445",
+      "volumeUsd24Hr": "1070505.5465038016038381",
+      "priceUsd": "2.3227097895889461",
+      "changePercent24Hr": "-3.5350539775696709",
+      "vwap24Hr": "2.3824655893493940"
+    },
+    {
+      "id": "wax",
+      "rank": "79",
+      "symbol": "WAX",
+      "name": "WAX",
+      "supply": "930851783.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "97655514.0539368145662976",
+      "volumeUsd24Hr": "502242.2241814253790706",
+      "priceUsd": "0.1049098426166272",
+      "changePercent24Hr": "-0.2642773636649088",
+      "vwap24Hr": "0.1081505431634693"
+    },
+    {
+      "id": "dropil",
+      "rank": "80",
+      "symbol": "DROP",
+      "name": "Dropil",
+      "supply": "20400364380.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "97642871.1228858809814420",
+      "volumeUsd24Hr": "19508.6016729510095635",
+      "priceUsd": "0.0047863297588259",
+      "changePercent24Hr": "4.6214197327960148",
+      "vwap24Hr": "0.0045149751910759"
+    },
+    {
+      "id": "cryptonex",
+      "rank": "81",
+      "symbol": "CNX",
+      "name": "Cryptonex",
+      "supply": "45404170.0000000000000000",
+      "maxSupply": "210000000.0000000000000000",
+      "marketCapUsd": "94574825.8798684651622340",
+      "volumeUsd24Hr": "565.9387715172474683",
+      "priceUsd": "2.0829546246494202",
+      "changePercent24Hr": null,
+      "vwap24Hr": "2.2187398515264581"
+    },
+    {
+      "id": "loopring",
+      "rank": "82",
+      "symbol": "LRC",
+      "name": "Loopring",
+      "supply": "572074043.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "94297139.2777558951198078",
+      "volumeUsd24Hr": "1863604.9687841451909344",
+      "priceUsd": "0.1648338015534746",
+      "changePercent24Hr": "-4.6338281033175706",
+      "vwap24Hr": "0.1726450529778710"
+    },
+    {
+      "id": "odem",
+      "rank": "83",
+      "symbol": "ODE",
+      "name": "ODEM",
+      "supply": "179017071.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "94037086.4625686377910169",
+      "volumeUsd24Hr": "44134.5080913917485181",
+      "priceUsd": "0.5252967548696439",
+      "changePercent24Hr": "-0.3258005726099414",
+      "vwap24Hr": "0.5251714249241548"
+    },
+    {
+      "id": "ark",
+      "rank": "84",
+      "symbol": "ARK",
+      "name": "Ark",
+      "supply": "104329562.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "91111024.6087103014893892",
+      "volumeUsd24Hr": "172385.3031550796720921",
+      "priceUsd": "0.8733001736239466",
+      "changePercent24Hr": "-1.2564658333450729",
+      "vwap24Hr": "0.8929527636368442"
+    },
+    {
+      "id": "kyber-network",
+      "rank": "85",
+      "symbol": "KNC",
+      "name": "Kyber Network",
+      "supply": "134132697.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "89869434.5994297616301868",
+      "volumeUsd24Hr": "2555517.5109092551874112",
+      "priceUsd": "0.6700039334885644",
+      "changePercent24Hr": "-1.7025431872652175",
+      "vwap24Hr": "0.6844352790356155"
+    },
+    {
+      "id": "power-ledger",
+      "rank": "86",
+      "symbol": "POWR",
+      "name": "Power Ledger",
+      "supply": "373755607.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "85413562.5896066987095022",
+      "volumeUsd24Hr": "453076.6616600600720671",
+      "priceUsd": "0.2285278427665346",
+      "changePercent24Hr": "-1.9712752401459789",
+      "vwap24Hr": "0.2325207491486423"
+    },
+    {
+      "id": "reddcoin",
+      "rank": "87",
+      "symbol": "RDD",
+      "name": "ReddCoin",
+      "supply": "28808713174.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "84031879.8958259190769064",
+      "volumeUsd24Hr": "459178.1935912316253457",
+      "priceUsd": "0.0029168911290236",
+      "changePercent24Hr": "-5.5134055105863521",
+      "vwap24Hr": "0.0030657907613469"
+    },
+    {
+      "id": "mybit-token",
+      "rank": "88",
+      "symbol": "MYB",
+      "name": "MyBit Token",
+      "supply": "71994082.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "82566853.6087101097602932",
+      "volumeUsd24Hr": "450.5997698930615175",
+      "priceUsd": "1.1468561208782426",
+      "changePercent24Hr": "-4.9764744820825923",
+      "vwap24Hr": "1.2034702155796526"
+    },
+    {
+      "id": "chainlink",
+      "rank": "89",
+      "symbol": "LINK",
+      "name": "ChainLink",
+      "supply": "350000000.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "82168672.9962388150000000",
+      "volumeUsd24Hr": "557870.9109571573594728",
+      "priceUsd": "0.2347676371321109",
+      "changePercent24Hr": "-6.2527947678694718",
+      "vwap24Hr": "0.2499937524326967"
+    },
+    {
+      "id": "nxt",
+      "rank": "90",
+      "symbol": "NXT",
+      "name": "Nxt",
+      "supply": "998999942.0000000000000000",
+      "maxSupply": "1000000000.0000000000000000",
+      "marketCapUsd": "81198254.4110615187915554",
+      "volumeUsd24Hr": "1595124.9785695891285063",
+      "priceUsd": "0.0812795386639387",
+      "changePercent24Hr": "-2.4554112053009837",
+      "vwap24Hr": "0.0830617144822825"
+    },
+    {
+      "id": "gas",
+      "rank": "91",
+      "symbol": "GAS",
+      "name": "Gas",
+      "supply": "10128375.0000000000000000",
+      "maxSupply": "100000000.0000000000000000",
+      "marketCapUsd": "80756836.1633804260104000",
+      "volumeUsd24Hr": "2111417.7185233607980979",
+      "priceUsd": "7.9733260432577216",
+      "changePercent24Hr": "-1.5768866466032892",
+      "vwap24Hr": "8.1825838811279477"
+    },
+    {
+      "id": "pivx",
+      "rank": "92",
+      "symbol": "PIVX",
+      "name": "PIVX",
+      "supply": "56781166.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "80399980.9389577509924332",
+      "volumeUsd24Hr": "313337.2759915586330291",
+      "priceUsd": "1.4159621332707002",
+      "changePercent24Hr": "-0.8002091874657772",
+      "vwap24Hr": "1.4444985525294818"
+    },
+    {
+      "id": "polymath-network",
+      "rank": "93",
+      "symbol": "POLY",
+      "name": "Polymath",
+      "supply": "276420107.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "78935697.5910384385676372",
+      "volumeUsd24Hr": "1335629.2017694175577624",
+      "priceUsd": "0.2855642393302396",
+      "changePercent24Hr": "4.0455926507406254",
+      "vwap24Hr": "0.2890761811772439"
+    },
+    {
+      "id": "loom-network",
+      "rank": "94",
+      "symbol": "LOOM",
+      "name": "Loom Network",
+      "supply": "588596773.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "77987621.8812796307132102",
+      "volumeUsd24Hr": "1006325.3421933665626323",
+      "priceUsd": "0.1324975355943374",
+      "changePercent24Hr": "-2.1167140599846891",
+      "vwap24Hr": "0.1374688264179278"
+    },
+    {
+      "id": "tenx",
+      "rank": "95",
+      "symbol": "PAY",
+      "name": "TenX",
+      "supply": "109255861.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "77139018.8213041720496316",
+      "volumeUsd24Hr": "3572125.9478968483211219",
+      "priceUsd": "0.7060400981262156",
+      "changePercent24Hr": "-3.5634251724811257",
+      "vwap24Hr": "0.7213296845669283"
+    },
+    {
+      "id": "theta-token",
+      "rank": "96",
+      "symbol": "THETA",
+      "name": "Theta Token",
+      "supply": "664002689.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "74242070.1156589688086217",
+      "volumeUsd24Hr": "4809799.3307737715703190",
+      "priceUsd": "0.1118098937633353",
+      "changePercent24Hr": "-3.8587975352961551",
+      "vwap24Hr": "0.1174102767786506"
+    },
+    {
+      "id": "cybermiles",
+      "rank": "97",
+      "symbol": "CMT",
+      "name": "CyberMiles",
+      "supply": "698298400.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "74016218.8295662172484800",
+      "volumeUsd24Hr": "5487814.0821834615620793",
+      "priceUsd": "0.1059951144518822",
+      "changePercent24Hr": "-1.3887330457371032",
+      "vwap24Hr": "0.1089435664587192"
+    },
+    {
+      "id": "elastos",
+      "rank": "98",
+      "symbol": "ELA",
+      "name": "Elastos",
+      "supply": "7325788.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "73759561.7785686438835696",
+      "volumeUsd24Hr": "2988798.5954251919568770",
+      "priceUsd": "10.0684816129771492",
+      "changePercent24Hr": "-7.4714363980896426",
+      "vwap24Hr": "10.5667645310378300"
+    },
+    {
+      "id": "nuls",
+      "rank": "99",
+      "symbol": "NULS",
+      "name": "Nuls",
+      "supply": "40000000.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "73614275.0984073680000000",
+      "volumeUsd24Hr": "2432484.7566430601657685",
+      "priceUsd": "1.8403568774601842",
+      "changePercent24Hr": "-0.6114263216447357",
+      "vwap24Hr": "1.8714245344895071"
+    },
+    {
+      "id": "bibox-token",
+      "rank": "100",
+      "symbol": "BIX",
+      "name": "Bibox Token",
+      "supply": "102339166.0000000000000000",
+      "maxSupply": null,
+      "marketCapUsd": "72116102.5394724649666992",
+      "volumeUsd24Hr": "45084130.4166935808283857",
+      "priceUsd": "0.7046774500729512",
+      "changePercent24Hr": "-3.0331628584946192",
+      "vwap24Hr": "0.7207903092174193"
+    }
+  ],
+  "timestamp": 1533581088278
+}
+CoinCap API 2.0
+
+v2.0.1
+
+CoinCap is a useful tool for real-time pricing and market activity for over 1,000 cryptocurrencies. By collecting exchange data from thousands of markets, we are able to offer transparent and accurate data on asset price and availability.
+
+Our API will offer insight into exactly which exchanges and markets contribute to our pricing.
+
+For all endpoints, a single page offers 100 responses by default and supports up to 2,000 responses per page upon requests.
+
+Status Codes and Error Response
+The following are error codes you may encounter as you use CoinCap. Note: all CoinCap requests are GET requests
+
+200: Successful - this is the data you were looking for
+
+400-417: Client error - these will often be accompanied by some response in the body that will give the user direction on how to change the request. Here are some examples of 400: Bad Request responses:
+
+'use valid interval': m1, m5, m15, m30, h1, h2, h6, h12, d1': Interval must be m1 for one minute, m5 for 5 minute, m15 for 15 minute, m30 for 30 minute, h1 for one hour, h2 for 2 hour, h6 for 6 hour, h12 for 12 hour, and d1 for one day
+'query requires end': If user includes a start query, there must be an end query
+'query requires start': If user includes an end query, there must be a start query
+'limit exceeds 2000': bad request, exceeds max limit
+'missing exchange': This endpoint requires user to specify exchange in parameters
+'missing interval': This endpoint requires user to specify interval (ex: m1, m15, d1, etc) in parameters
+'missing base': This endpoint requires user to specify base asset (ex: BTC)
+'missing quote': This endpoint requires user to specify quote asset (ex: USD)
+500-505: Server Error - Looks like something went down on our end. Try back again soon!
+
+For a full list of HTTP Status Code definitions, please visit here.
+
+Headers
+We encourage clients to use compression via the Accept-Encoding header.
+
+Accept-Encoding: gzip or Accept-Encoding: deflate
+
+RESTful API documentation
+
+CoinCap 2.0 RESTful API is currently in production!
+The CoinCap team is excited to offer you new endpoints and more clarity on pricing! CoinCap 2.0 launched on September 26, 2018.
+
+Please let us know what you like, what you would hope to see, or any bugs/changes that you'd like to document. The easiest way to submit feedback to our team is to fill out a support ticket here.
+
+The old CoinCap API is deprecated and was shut down on March 1, 2019. For any issues with transitioning from the old CoinCap API to the new, please submit feedback via the zendesk link above!
+
+Assets
+
+The asset price is a volume-weighted average calculated by collecting ticker data from exchanges. Each exchange contributes to this price in relation to their volume, meaning higher volume exchanges have more affect on this global price. All values are translated into USD (United States Dollar) and can be translated into other units of measurement through the /rates endpoint.
+
+GET /assets
+api.coincap.io/v2/assets
+REQUEST
+Key	Required	Value	Description
+search	optional	bitcoin	search by asset id (bitcoin) or symbol (BTC)
+ids	optional	bitcoin	query with multiple ids=bitcoin,ethereum,monero
+limit	optional	5	max limit of 2000
+offset	optional	1	offset
+RESPONSE
+Key	Description
+id	unique identifier for asset
+rank	rank is in ascending order - this number is directly associated with the marketcap whereas the highest marketcap receives rank 1
+symbol	most common symbol used to identify this asset on an exchange
+name	proper name for asset
+supply	available supply for trading
+maxSupply	total quantity of asset issued
+marketCapUsd	supply x price
+volumeUsd24Hr	quantity of trading volume represented in USD over the last 24 hours
+priceUsd	volume-weighted price based on real-time market data, translated to USD
+changePercent24Hr	the direction and value change in the last 24 hours
+vwap24Hr	Volume Weighted Average Price in the last 24 hours
+
+
+Example Request
+/assets
+curl --location --request GET 'api.coincap.io/v2/assets'
+Example Response
+200 OK
+Body Headers (8)
+{
+  "data": [
+    {
+      "id": "bitcoin",
+      "rank": "1",
+      "symbol": "BTC",
+      "name": "Bitcoin",
+      "supply": "17193925.0000000000000000",
+      "maxSupply": "21000000.0000000000000000",
+      "marketCapUsd": "119150835874.4699281625807300",
+      "volumeUsd24Hr": "2927959461.1750323310959460",
+      "priceUsd": "6929.8217756835584756",
+      "changePercent24Hr": "-0.8101417214350335",
+      "vwap24Hr": "7175.0663247679233209"
+    },
+GET /assets/{{id}}
+api.coincap.io/v2/assets/bitcoin
+REQUEST
+Key	Required	Value	Description
+id	required	bitcoin	asset id
+RESPONSE
+Key	Description
+id	unique identifier for asset
+rank	rank is in ascending order - this number is directly associated with the marketcap whereas the highest marketcap receives rank 1
+symbol	most common symbol used to identify this asset on an exchange
+name	proper name for asset
+supply	available supply for trading
+maxSupply	total quantity of asset issued
+marketCapUsd	supply x price
+volumeUsd24Hr	quantity of trading volume represented in USD over the last 24 hours
+priceUsd	volume-weighted price based on real-time market data, translated to USD
+changePercent24Hr	the direction and value change in the last 24 hours
+vwap24Hr	Volume Weighted Average Price in the last 24 hours
+
+
+Example Request
+/assets/{{id}}
+curl --location --request GET 'api.coincap.io/v2/assets/bitcoin'
+Example Response
+200 OK
+Body Headers (7)
+{
+  "data": {
+    "id": "bitcoin",
+    "rank": "1",
+    "symbol": "BTC",
+    "name": "Bitcoin",
+    "supply": "17193925.0000000000000000",
+    "maxSupply": "21000000.0000000000000000",
+    "marketCapUsd": "119179791817.6740161068269075",
+    "volumeUsd24Hr": "2928356777.6066665425687196",
+    "priceUsd": "6931.5058555666618359",
+    "changePercent24Hr": "-0.8101417214350335",
+    "vwap24Hr": "7175.0663247679233209"
+  },
+  "timestamp": 1533581098863
+GET /assets/{{id}}/history
+api.coincap.io/v2/assets/bitcoin/history?interval=d1
+REQUEST
+Key	Required	Value	Description
+id	required	bitcoin	asset id
+interval	required	m1, m5, m15, m30, h1, h2, h6, h12, d1	point-in-time interval. minute and hour intervals represent price at that time, the day interval represents average of 24 hour periods (timezone: UTC)
+start & end	optional	1528470720000	UNIX time in milliseconds. omiting will return the most recent asset history. If start is supplied, end is required and vice vera
+RESPONSE
+Key	Description
+priceUsd	volume-weighted price based on real-time market data, translated to USD
+time	timestamp in UNIX in milliseconds
+PARAMS
+intervald1
+
+Example Request
+/assets/{{id}}/history
+curl --location --request GET 'api.coincap.io/v2/assets/bitcoin/history?interval=d1'
+Example Response
+200 OK
+Body Headers (8)
+{
+  "data": [
+    {
+      "priceUsd": "6379.3997635993342453",
+      "time": 1530403200000
+    },
+    {
+      "priceUsd": "6466.3135622762295280",
+      "time": 1530489600000
+    },
+    {
+      "priceUsd": "6601.0724971279524219",
+      "time": 1530576000000
+    },
+    {
+GET /assets/{{id}}/markets
+api.coincap.io/v2/assets/bitcoin/markets
+REQUEST
+Key	Required	Value	Description
+id	required	bitcoin	asset id
+limit	optional	5	max limit of 2000
+offset	optional	1	offset
+RESPONSE
+Key	Description
+exchangeId	unique identifier for exchange
+baseId	unique identifier for this asset, base is asset purchased
+quoteId	unique identifier for this asset, quote is asset used to purchase based
+baseSymbol	most common symbol used to identify asset, base is asset purchased
+quoteSymbol	most common symbol used to identify asset, quote is asset used to purchase base
+volumeUsd24Hr	volume transacted on this market in last 24 hours
+priceUsd	the amount of quote asset traded for one unit of base asset
+volumePercent	percent of quote asset volume
+
+
+Example Request
+/assets/{{id}}/markets
+curl --location --request GET 'api.coincap.io/v2/assets/bitcoin/markets' \
+--data-raw ''
+Example Response
+200 OK
+Body Headers (8)
+{
+  "data": [
+    {
+      "exchangeId": "Binance",
+      "baseId": "bitcoin",
+      "quoteId": "tether",
+      "baseSymbol": "BTC",
+      "quoteSymbol": "USDT",
+      "volumeUsd24Hr": "277775213.1923032624064566",
+      "priceUsd": "6263.8645034633024446",
+      "volumePercent": "7.4239157877678087"
+    },
+    {
+      "exchangeId": "Bitfinex",
+      "baseId": "bitcoin",
+Rates
+
+All prices on the CoinCap API are standardized in USD (United States Dollar). To make translating to other values easy, CoinCap now offers a Rates endpoint. We offer fiat and top cryptocurrency translated rates. Fiat rates are available through OpenExchangeRates.org.
+
+GET /rates
+api.coincap.io/v2/rates
+RESPONSE
+Key	Description
+id	unique identifier for asset or fiat
+symbol	most common symbol used to identify asset or fiat
+currencySymbol	currency symbol used to identify asset or fiat
+rateUsd	rate conversion to USD
+type	type of currency - fiat or crypto
+
+
+Example Request
+/rates
+curl --location --request GET 'api.coincap.io/v2/rates'
+Example Response
+200 OK
+Body Headers (8)
+{
+  "data": [
+    {
+      "id": "barbadian-dollar",
+      "symbol": "BBD",
+      "currencySymbol": "$",
+      "type": "fiat",
+      "rateUsd": "0.5000000000000000"
+    },
+    {
+      "id": "malawian-kwacha",
+      "symbol": "MWK",
+      "currencySymbol": "MK",
+      "type": "fiat",
+      "rateUsd": "0.0013750106599420"
+GET /rates/{{id}}
+api.coincap.io/v2/rates/bitcoin
+REQUEST
+Key	Required	Value	Description
+id	required	bitcoin	asset id
+RESPONSE
+Key	Description
+id	unique identifier for asset or fiat
+symbol	most common symbol used to identify asset or fiat
+currencySymbol	currency symbol used to identify asset or fiat
+rateUsd	rate conversion to USD
+type	type of currency - fiat or crypto
+
+
+Example Request
+/rates/{{id}}
+curl --location --request GET 'api.coincap.io/v2/rates/bitcoin'
+Example Response
+200 OK
+Body Headers (7)
+{
+  "data": {
+    "id": "bitcoin",
+    "symbol": "BTC",
+    "currencySymbol": "₿",
+    "type": "crypto",
+    "rateUsd": "6444.3132749056076909"
+  },
+  "timestamp": 1536347871542
+}
+Exchanges
+
+The /exchanges endpoint offers an understanding into the where cryptocurrency is being exchanged and offers high-level information on those exchanges. CoinCap strives to provide transparency in the recency of our exchange data. For that purpose you will find an "updated" key for each exchange. For more details into coin pairs and volume, see the /markets endpoint.
+
+GET /exchanges
+api.coincap.io/v2/exchanges
+RESPONSE
+Key	Description
+id	unique identifier for exchange
+name	proper name of exchange
+rank	rank is in ascending order - this number is directly associated with the total exchange volume whereas the highest volume exchange receives rank 1
+percentTotalVolume	the amount of daily volume a single exchange transacts in relation to total daily volume of all exchanges
+volumeUsd	daily volume represented in USD
+tradingPairs	number of trading pairs (or markets) offered by exchange
+socket	true/false, true = trade socket available, false = trade socket unavailable
+exchangeUrl	website to exchange
+updated	UNIX timestamp (milliseconds) since information was received from this exchange
+
+
+Example Request
+/exchanges
+curl --location --request GET 'api.coincap.io/v2/exchanges'
+Example Response
+200 OK
+Body Headers (8)
+{
+  "data": [
+    {
+      "id": "okex",
+      "name": "Okex",
+      "rank": "1",
+      "percentTotalVolume": "21.379485735166293542000000000000000000",
+      "volumeUsd": "616465445.1646260280799955",
+      "tradingPairs": "22",
+      "socket": false,
+      "exchangeUrl": "https://www.okex.com/",
+      "updated": 1536343139514
+    },
+    {
+      "id": "bithumb",
+GET /exchanges/{{id}}
+api.coincap.io/v2/exchanges/kraken
+REQUEST
+Key	Required	Value	Description
+id	required	kraken	exchange id
+RESPONSE
+Key	Description
+id	unique identifier for exchange
+name	proper name of exchange
+rank	rank is in ascending order - this number is directly associated with the total exchange volume whereas the highest volume exchange receives rank 1
+percentTotalVolume	the amount of daily volume a single exchange transacts in relation to total daily volume of all exchanges
+volumeUsd	daily volume represented in USD
+tradingPairs	number of trading pairs (or markets) offered by exchange
+socket	true/false, true = trade socket available, false = trade socket unavailable
+exchangeUrl	website to exchange
+updated	UNIX timestamp (milliseconds) since information was received from this exchange
+
+
+Example Request
+/exchanges/{{id}}
+curl --location --request GET 'api.coincap.io/v2/exchanges/kraken'
+Example Response
+200 OK
+Body Headers (7)
+{
+  "data": {
+    "id": "kraken",
+    "name": "Kraken",
+    "rank": "4",
+    "percentTotalVolume": "2.946801735133553120000000000000000000",
+    "volumeUsd": "84969370.4499608426167365",
+    "tradingPairs": "52",
+    "socket": false,
+    "exchangeUrl": "https://kraken.com",
+    "updated": 1536343139468
+  },
+  "timestamp": 1536605874069
+}
+Markets
+
+Take a closer look into exchanges with the /markets endpoint. Similar to the /exchanges endpoint, we strive to offer transparency into how real-time our data is with a key identifying when the market was last updated. For a historical view on how a market has performed, see the /candles endpoint. All market data represents actual trades processed, orders on an exchange are not represented. Data received from individual markets is used to calculate the current price of an asset.
+
+GET /markets
+api.coincap.io/v2/markets
+REQUEST
+Key	Required	Value	Description
+exchangeId	optional	poloniex	search by exchange id
+baseSymbol	optional	BTC	returns all containing the base symbol
+quoteSymbol	optional	ETH	returns all containing the quote symbol
+baseId	optional	bitcoin	returns all containing the base id
+quoteId	optional	ethereum	returns all containing the quote id
+assetSymbol	optional	BTC	returns all assets containing symbol (base and quote)
+assetId	optional	bitcoin	returns all assets containing id (base and quote)
+limit	optional	5	max limit of 2000
+offset	optional	1	offset
+RESPONSE
+Key	Description
+exchangeId	unique identifier for exchange
+rank	rank is in ascending order - this number represents the amount of volume transacted by this market in relation to other markets on that exchange
+baseSymbol	most common symbol used to identify asset, base is asset purchased
+baseId	unique identifier for this asset, base is asset purchased
+quoteSymbol	most common symbol used to identify asset, quote is asset used to purchase base
+quoteId	unique identifier for this asset, quote is asset used to purchase base
+priceQuote	the amount of quote asset traded for one unit of base asset
+priceUsd	quote price translated to USD
+volumeUsd24Hr	volume transacted on this market in last 24 hours
+percentExchangeVolume	the amount of daily volume a single market transacts in relation to total daily volume of all markets on the exchange
+tradesCount24Hr	number of trades on this market in the last 24 hours
+updated	UNIX timestamp (milliseconds) since information was received from this particular market
+
+
+Example Request
+/markets
+curl --location --request GET 'api.coincap.io/v2/markets'
+Example Response
+200 OK
+Body Headers (8)
+{
+  "data": [
+    {
+      "exchangeId": "bitstamp",
+      "rank": "1",
+      "baseSymbol": "BTC",
+      "baseId": "bitcoin",
+      "quoteSymbol": "USD",
+      "quoteId": "united-states-dollar",
+      "priceQuote": "6927.3300000000000000",
+      "priceUsd": "6927.3300000000000000",
+      "volumeUsd24Hr": "43341291.9576547008000000",
+      "percentExchangeVolume": "67.2199253376108585",
+      "tradesCount24Hr": "420721",
+      "updated": 1533581033590
+Candles
+
+The /candles endpoint offers a look into how a market has performed historically. This data is represented in OHLCV candles - Open, High, Low, Close, and Volume. Please note that many parameters are required to request candles for a specific market. Candle history goes back to the inception of an exchange - you may even find data for exchanges that have come and gone!
+
+GET /candles
+api.coincap.io/v2/candles?exchange=poloniex&interval=h8&baseId=ethereum&quoteId=bitcoin
+REQUEST
+Key	Required	Value	Description
+exchange	required	poloniex	exchange id
+interval	required	m1, m5, m15, m30, h1, h2, h4, h8, h12, d1, w1	candle interval
+baseId	required	ethereum	base id
+quoteId	required	bitcoin	quote id
+start	optional	1528410925604	UNIX time in milliseconds. omiting will return the most recent candles
+end	optional	1528411045604	UNIX time in milliseconds. omiting will return the most recent candles
+RESPONSE
+Key	Description
+open	the price (quote) at which the first transaction was completed in a given time period
+high	the top price (quote) at which the base was traded during the time period
+low	the bottom price (quote) at which the base was traded during the time period
+close	the price (quote) at which the last transaction was completed in a given time period
+volume	the amount of base asset traded in the given time period
+period	timestamp for starting of that time period, represented in UNIX milliseconds
+PARAMS
+exchangepoloniex
+intervalh8
+baseIdethereum
+quoteIdbitcoin
+
+Example Request
+/candles
+curl --location --request GET 'api.coincap.io/v2/candles?exchange=poloniex&interval=h8&baseId=ethereum&quoteId=bitcoin%0A'
+Example Response
+200 OK
+Body Headers (8)
+{
+  "data": [
+    {
+      "open": "0.0708000000000000",
+      "high": "0.0710450000000000",
+      "low": "0.0706434000000000",
+      "close": "0.0708350100000000",
+      "volume": "1818.1433015300000000",
+      "period": 1530720000000
+    },
+    {
+      "open": "0.0708316700000000",
+      "high": "0.0715192000000000",
+      "low": "0.0706544100000000",
+      "close": "0.0712472600000000",
+WebSocket documentation
+
+Trades
+
+The CoinCap trade websocket streams trades from other cryptocurrency exchange websockets. Users must select a specific exchange. In the /exchanges endpoint users can determine if an exchange has a socket available by noting response 'socket':true/false. See an example in the /exchanges endpoint documentation above. The trades websocket is the only way to receive individual trade data through CoinCap.
+
+wss://ws.coincap.io/trades/binance
+
+REQUEST
+Path	Required	Value	Description
+exchange	required	binance	list of exchanges can be found in the /exchanges endpoint
+SAMPLE CODE
+<script>
+    const tradeWs = new WebSocket('wss://ws.coincap.io/trades/binance')
+
+    tradeWs.onmessage = function (msg) {
+        console.log(msg.data)
+    }
+</script>
+RESPONSE
+{
+    "exchange":"binance",
+    "base":"ethereum",
+    "quote":"bitcoin",
+    "direction":"buy",
+    "price":0.0342,
+    "volume":2.923,
+    "timestamp":1539198668067,
+    "priceUsd":225.08077937819812
+}
+Prices
+
+The CoinCap prices endpoint is the most accurate source of real-time changes to the global price of an asset. Each time the system receives data that moves the global price in one direction or another, this change is immediately published through the websocket. These prices correspond with the values shown in /assets - a value that may change several times per second based on market activity.
+
+wss://ws.coincap.io/prices?assets=bitcoin,ethereum,monero,litecoin wss://ws.coincap.io/prices?assets=ALL
+
+REQUEST
+Path	Required	Value	Description
+id	required	bitcoin	list of assets ids can be found in the /assets endpoint
+Note: Comma separated. Use "ALL" for all assets
+SAMPLE CODE
+<script>
+    const pricesWs = new WebSocket('wss://ws.coincap.io/prices?assets=bitcoin,ethereum,monero,litecoin')
+
+    pricesWs.onmessage = function (msg) {
+        console.log(msg.data)
+    }
+</script>
+RESPONSE
+{  
+   "bitcoin":"6389.06534240",
+   "ethereum":"192.93111286",
+   "monero":"108.90302506",
+   "litecoin":"52.25484165"
+}
+COINCAP API 2.0
+
+Introduction
+RESTful API documentation
+WebSocket documentation
