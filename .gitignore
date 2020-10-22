@@ -20,3 +20,15 @@ data/history/litecoin/litecoin.csv
 data/history/stellar/stellar.csv
 data/history/tether/tether.csv
 data/history/xrp/xrp.csv
+
+# ignore json folders, too big
+data/history/bitcoin/json/
+data/history/ethereum/json/
+data/history/xrp/json/
+data/history/litecoin/json/
+data/history/stellar/json/
+data/history/bitcoin-cash/json/
+data/history/tether/json/
+data/history/iota/json/
+data/history/eos/json/
+data/history/cardano/json/
