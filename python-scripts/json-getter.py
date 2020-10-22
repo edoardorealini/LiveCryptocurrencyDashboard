@@ -1,22 +1,19 @@
 from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
 import time
+from tqdm import tqdm
 
 
 def retrieve_history(currency, log_file):
-    timestamp1gen2017 = 1483228800000
-    timestamp_curr = int(time.time()) * 1000    # to get milliseconds
+    global all_days
 
-    milliseconds_per_day = 86400000
-
-    tmstp = timestamp1gen2017
-
-    while tmstp < timestamp_curr:
+    for day in tqdm(range(len(all_days.keys()))):
 
         time.sleep(1)   # provare a diminuire a 0.5 domani
 
-        start_day = str(tmstp)
-        end_day = str(tmstp + milliseconds_per_day)
+        start_day = str(all_days[day])
+        if (day != 1391):       # skip today
+            end_day = str(all_days[day + 1])
 
         url = "https://api.coincap.io/v2/assets/" + currency + "/history?interval=m1"
 
@@ -40,14 +37,30 @@ def retrieve_history(currency, log_file):
             log_file.write("Request for currency " + currency + " for day " + start_day + " failed!\tReason: " + e.reason + "\n")
             print("ERROR at " + start_day + " for the following reason: " + e.reason)
 
-        tmstp += milliseconds_per_day
-
     log_file.close()
 
 
 # ---------------------------MAIN---------------------------
 
-assets = ["bitcoin", "ethereum", "xrp", "bitcoin-cash", "eos", "stellar", "litecoin", "cardano", "tether", "iota"]
+timestamp1gen2017 = 1483228800000
+timestamp_curr = int(time.time()) * 1000    # to get milliseconds
+
+milliseconds_per_day = 86400000
+
+tmstp = timestamp1gen2017
+
+day = 0
+
+all_days = {}
+
+while tmstp < timestamp_curr:
+    all_days[day] = tmstp
+    day += 1
+    tmstp += milliseconds_per_day
+
+# "stellar", "litecoin", "cardano", "tether", "iota"
+
+assets = ["tether"]
 # MERDA fixa XRP e RIPPLE!!
 for currency in assets:
     name_log_file = currency + "_log_file.txt"
