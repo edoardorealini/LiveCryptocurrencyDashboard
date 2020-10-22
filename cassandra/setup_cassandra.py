@@ -5,12 +5,13 @@ from cassandra.io.libevreactor import LibevConnection
 from cassandra.cluster import Cluster
 from cassandra.cqlengine.management import sync_table
 from cassandra.query import SimpleStatement
+import pandas as pd
 
 
 def main():
     KEYSPACE = "cryptos_keyspace"
 
-    currency = "bitcoin"
+    assets = ['bitcoin', "ethereum", "tether", "xrp", "litecoin", "cardano", "iota", "eos", "stellar"]      # missing quel bastardo di bitcoin-cash
 
     cluster = Cluster()
     cluster.connection_class = LibevConnection
@@ -25,36 +26,28 @@ def main():
 
     session.set_keyspace(KEYSPACE)
 
-    session.execute("CREATE TABLE IF NOT EXISTS " + currency + """
-            (
-                ts text,
-                price text,
-                date text,
-                hour text,
-                future text,
-                PRIMARY KEY (ts)
-            )
-            """)
+    for currency in assets:
 
+        create_table_command = "CREATE TABLE IF NOT EXISTS {} (ts text, price text, date text, hour text, future text, PRIMARY KEY (ts))".format(currency)
 
-    prepared = session.prepare("INSERT INTO " + currency + """ (ts, price, date, hour, future)
-        VALUES (?, ?, ?, ?, ?)
-        """)
+        session.execute(create_table_command)
 
-    for i in range(10):
-        # session.execute(query, dict(key="ts%d" % i, price='price', date='date', hour=""))
-        session.execute(prepared, ("ts%d" % i, '50.39', '2019-04-25', '00:00:00', '?'))
+        command = "INSERT INTO {} (ts, price, date, hour, future) VALUES (?, ?, ?, ?, ?)".format(currency)
 
-    future = session.execute_async("SELECT * FROM " + currency)
+        prepared = session.prepare(command)
 
-    try:
-        rows = future.result()
-    except Exception:
-        print("Error reading rows")
-        return
+        folder_path = "../data/history/" + currency + "/only_days_" + currency + ".csv"
 
-    for row in rows:
-        print('\t'.join(row))
+        df = pd.read_csv(folder_path)
+
+        for i in range(len(df["timestamp"])):
+            # session.execute(query, dict(key="ts%d" % i, price='price', date='date', hour=""))
+            row = df.iloc[i]
+            session.execute(prepared, ("{}".format(row["timestamp"]),
+                                       "{}".format(row["price"]),
+                                       "{}".format(row["date"]),
+                                       "{}".format(row["hour"]),
+                                       "?"))
 
 if __name__ == "__main__":
     main()
