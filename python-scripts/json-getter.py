@@ -2,6 +2,7 @@ from urllib.request import Request, urlopen
 from urllib.error import HTTPError, URLError
 import time
 from tqdm import tqdm
+import json
 
 
 def retrieve_history(currency, log_file):
@@ -60,7 +61,7 @@ while tmstp < timestamp_curr:
 
 # "stellar", "litecoin", "cardano", "tether", "iota"
 
-assets = ["tether"]
+assets = ["iota"]
 # MERDA fixa XRP e RIPPLE!!
 for currency in assets:
     name_log_file = currency + "_log_file.txt"
