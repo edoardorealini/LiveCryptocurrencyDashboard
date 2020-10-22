@@ -1,0 +1,2 @@
+Request for currency cardano for day 1552176000000 failed!	Reason: Gateway Time-out
+Request for currency cardano for day 1552780800000 failed!	Reason: Internal Server Error

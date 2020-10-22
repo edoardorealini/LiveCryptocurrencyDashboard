@@ -12,7 +12,9 @@ def retrieve_history(currency, log_file):
     tmstp = timestamp1gen2017
 
     while tmstp < timestamp_curr:
-        time.sleep(1)
+
+        time.sleep(1)   # provare a diminuire a 0.5 domani
+
         start_day = str(tmstp)
         end_day = str(tmstp + milliseconds_per_day)
 
@@ -45,8 +47,8 @@ def retrieve_history(currency, log_file):
 
 # ---------------------------MAIN---------------------------
 
-assets = ["bitcoin", "ethereum", "ripple", "bitcoin-cash", "eos", "stellar", "litecoin", "cardano", "tether", "iota"]
-
+assets = ["bitcoin", "ethereum", "xrp", "bitcoin-cash", "eos", "stellar", "litecoin", "cardano", "tether", "iota"]
+# MERDA fixa XRP e RIPPLE!!
 for currency in assets:
     name_log_file = currency + "_log_file.txt"
     log_file = open(name_log_file, "w")
