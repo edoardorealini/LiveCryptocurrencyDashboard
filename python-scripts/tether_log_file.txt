@@ -1,0 +1,2 @@
+Request for currency tether for day 1553558400000 failed!	Reason: Internal Server Error
+Request for currency tether for day 1575676800000 failed!	Reason: Internal Server Error

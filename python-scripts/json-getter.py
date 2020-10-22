@@ -61,7 +61,7 @@ while tmstp < timestamp_curr:
 
 # "stellar", "litecoin", "cardano", "tether", "iota"
 
-assets = ["iota"]
+assets = ["tether"]
 # MERDA fixa XRP e RIPPLE!!
 for currency in assets:
     name_log_file = currency + "_log_file.txt"
