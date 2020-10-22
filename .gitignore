@@ -11,3 +11,12 @@ project/plugins/project/
 .cache
 .lib/
 data/history/bitcoin/bitcoin.csv
+data/history/bitcoin-cash/bitcoin-cash.csv
+data/history/cardano/cardano.csv
+data/history/eos/eos.csv
+data/history/ethereum/ethereum.csv
+data/history/iota/iota.csv
+data/history/litecoin/litecoin.csv
+data/history/stellar/stellar.csv
+data/history/tether/tether.csv
+data/history/xrp/xrp.csv
