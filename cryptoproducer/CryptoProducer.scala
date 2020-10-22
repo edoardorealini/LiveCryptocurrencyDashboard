@@ -18,7 +18,7 @@ import MyJsonProtocol._
 
 object CryptoProducer extends App{
 
-  val wait_sec = 1
+  val wait_sec = 5
 
   //this function returns the current timestamp as Long and the current price as Double
   //given the name of the crypto from the api
@@ -35,7 +35,6 @@ object CryptoProducer extends App{
 
   }
 
-  val topic = "avg"
   val brokers = "localhost:9092"
   val props = new Properties()
   props.put(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, brokers)
@@ -50,13 +49,15 @@ object CryptoProducer extends App{
   while(true){
 
     for(crypto <- cryptos){
-      println(crypto)
-      println(getCurrentPrice(crypto) + "\n")
+      //println(crypto)
+      //println(getCurrentPrice(crypto) + "\n")
 
       val time_price = getCurrentPrice(crypto)
-      val tuple = "(" + time_price._1 + ", " + time_price._2 + ")"
+      val tuple = time_price._1 + "," + time_price._2
       
-      val data = new ProducerRecord[String, String](topic, null, tuple)
+      val data = new ProducerRecord[String, String](crypto, null, tuple)
+
+      println(data + "\n")
 
       producer.send(data)
 
@@ -67,4 +68,3 @@ object CryptoProducer extends App{
   producer.close()
 
 }
-

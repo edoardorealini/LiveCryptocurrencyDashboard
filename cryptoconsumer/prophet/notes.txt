@@ -1,0 +1,15 @@
+Consumer notes:
+
+The main idea is to:
+    - Retrieve the hystory data from cassandra once
+    - put it into a dataframe
+    - preprocess the df in order to make it usable from prophet
+    - get the latest update from kafka for the specific crypto
+    - retrain the prophet
+    - generate the predictions for the next 7 days
+    - put the updated predictions into cassandra 
+        this should happen by appending 7 rows for the following 7 days and then 
+        updating them every time the model makes a prediction
+
+    - into cassandra we should store also the fields that are needed to plot correctly
+        the data with the model's uncertanty and everything! 
