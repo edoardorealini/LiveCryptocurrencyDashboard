@@ -8,7 +8,7 @@ import kafka.producer.KeyedMessage
 import java.util.Properties
 
 
-case class Record(data: Map[String, String], timestamp: Long)
+case class Record(data: Map[String, Option[String]], timestamp: Long)
 
 object MyJsonProtocol extends DefaultJsonProtocol {
   implicit val recordFormat = jsonFormat2(Record)
@@ -18,7 +18,7 @@ import MyJsonProtocol._
 
 object CryptoProducer extends App{
 
-  val wait_sec = 5
+  val wait_sec = 0.7
 
   //this function returns the current timestamp as Long and the current price as Double
   //given the name of the crypto from the api
@@ -31,8 +31,8 @@ object CryptoProducer extends App{
     val converted = parsed.convertTo[Record]
 
     //here we have to return a tuple timestamp, price
-    return (converted.timestamp.toString, converted.data("priceUsd").toString)
-
+    return (converted.timestamp.toString, converted.data("priceUsd").toString.replace("Some(", "").replace(")", ""))
+    
   }
 
   val brokers = "localhost:9092"
@@ -44,25 +44,23 @@ object CryptoProducer extends App{
 
   val producer = new KafkaProducer[String, String](props)
 
-  val cryptos: List[String] = List("bitcoin", "xrp", "litecoin")    
+  val cryptos: List[String] = List("bitcoin", "ethereum", "tether", "xrp", "litecoin", "cardano", "iota", "eos", "stellar")    
 
   while(true){
 
     for(crypto <- cryptos){
-      //println(crypto)
-      //println(getCurrentPrice(crypto) + "\n")
 
       val time_price = getCurrentPrice(crypto)
       val tuple = time_price._1 + "," + time_price._2
+      println(crypto + ": " + tuple)
       
       val data = new ProducerRecord[String, String](crypto, null, tuple)
-
-      println(data + "\n")
-
       producer.send(data)
 
-      Thread.sleep(wait_sec * 1000)
+      Thread.sleep((wait_sec*1000).toLong)
+
     }
+
   }
 
   producer.close()

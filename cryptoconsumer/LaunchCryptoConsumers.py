@@ -2,7 +2,9 @@ from CryptoConsumerThread import CryptoConsumerThread
 
 if __name__ == "__main__":
 
-    cryptos = ["bitcoin"]
+    cryptos = ["bitcoin", "ethereum", "tether", "xrp", "litecoin", "cardano", "iota", "eos", "stellar"]
+    #cryptos = ["bitcoin"]
+
     thread_pool = []
 
     for crypto in cryptos:
