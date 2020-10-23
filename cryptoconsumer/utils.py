@@ -15,7 +15,7 @@ import requests as req
 def pandas_factory(colnames, rows):
     return pd.DataFrame(rows, columns=colnames)
 
-def update_cassandra(currency):
+def get_updated_df(currency):
     """
     This function gets in INPUT the name of the crypto the consumer is dealing with.
     It checks if the Cassandra DB is up to date w.r.t. to the current day and eventually updates the DB.
@@ -51,15 +51,13 @@ def update_cassandra(currency):
 
     index_last_entry = df[df["ts"] == last_ts].index.values
 
-    print(index_last_entry)
-
-    print(len(df.index))
-
-    print(df)
+    #print(index_last_entry)
+    #print(len(df.index))
+    #print(df)
 
     timestamp_curr = int(time.time()) * 1000    # to get milliseconds
 
-    if last_ts < timestamp_curr:
+    if int(last_ts) < int(timestamp_curr):
         # now get the actual price of the currency from the API
         url = "https://api.coincap.io/v2/assets/" + currency + "/history?interval=d1"
         start = "&start=" + str(last_ts)
@@ -76,7 +74,7 @@ def update_cassandra(currency):
             hour = split_date[1]
             priceUsd = data_point["priceUsd"]
 
-            if timestamp > last_ts:
+            if int(timestamp) > int(last_ts):
 
                 df.loc[len(df.index)] = [timestamp, date, hour, priceUsd, "?", "?", "?"]
 
@@ -84,13 +82,13 @@ def update_cassandra(currency):
 
                 prepared = session.prepare(command)
 
-                session.execute(prepared, (long(timestamp),
+                session.execute(prepared, ("{}".format(timestamp),
                                            "{}".format(priceUsd),
                                            "{}".format(date),
                                            "{}".format(hour),
                                            "?", "?", "?"))
 
-        return df
+    return df.tail(len(df.index) - 7)
 
 
 # ---------------- MAIN ---------------

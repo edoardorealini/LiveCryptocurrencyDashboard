@@ -19,6 +19,7 @@ import time
 from kafka import KafkaConsumer
 
 from fbprophet import Prophet
+from utils import get_updated_df
 
 def timestamp_to_date(timestamp):
     timestamp = int(timestamp) / 1000
@@ -44,16 +45,13 @@ class CryptoConsumerThread(threading.Thread):
         session = cluster.connect('cryptos_keyspace',wait_for_all_pools=True)
         session.execute("USE cryptos_keyspace")
 
+        '''
         # Data loading phase - this will be done by ricks' function with the update control too.
         # Move this phase into the for loop where the messages are managed
         query = 'SELECT * FROM ' + self.crypto
         query_result = session.execute(query, timeout=None)
         data = pd.DataFrame(list(query_result))
-
-        # Data preprocessing
-        data = data[["date", "price"]]
-        data = data.rename(columns = {"date": "ds", "price": "y"})
-        data = data.sort_values(by="ds")
+        '''        
       
         # Setup of Kafka connection
         consumer = KafkaConsumer(
@@ -66,6 +64,13 @@ class CryptoConsumerThread(threading.Thread):
         )
 
         for message in consumer:
+            data = get_updated_df(self.crypto)
+
+            # Data preprocessing
+            data = data[["date", "price"]]
+            data = data.rename(columns = {"date": "ds", "price": "y"})
+            data = data.sort_values(by="ds")
+
             # For each new message, update the dataset and retrain the whole model
             row = [timestamp_to_date(message.value[0]), message.value[1]]
             new_row = pd.DataFrame([row], columns=["ds", "y"])
@@ -86,36 +91,23 @@ class CryptoConsumerThread(threading.Thread):
             predictions = predictions.tail(7)
             predictions = predictions[["ds", "yhat", "yhat_lower", "yhat_upper"]]
 
-            print(predictions)
+            #print(predictions)
             # Putting the results back to Cassandra 
-            # TODO put results into Cassandra, in the future field of the interested days.
-            cassandra_command = "INSERT INTO {} (ts, price, date, hour, future) VALUES (?, ?, ?, ?, ?)".format(self.crypto)
+            # Putting results into Cassandra, in the future field of the interested days.
+            cassandra_command = "INSERT INTO {} (ts, price, date, hour, yhat, yhat_lower, yhat_upper) VALUES (?, ?, ?, ?, ?, ?, ?)".format(self.crypto)
             prepared = session.prepare(cassandra_command)
 
             for i in range(len(predictions["ds"])):
                 row = predictions.iloc[i]
-                # now fields have been added, we can store the fields directly into the fields in cassandra!
-                # TODO Update this following lines!
 
-                future_dict = {
-                    "yhat": row["yhat"],
-                    "yhat_lower": row["yhat_lower"],
-                    "yhat_upper": row["yhat_upper"]
-                }
+                date = str(row["ds"]).replace(" 00:00:00", "")
+
                 session.execute(prepared, ("{}".format(date_to_timestamp(row["ds"])),
                                         "{}".format(row["yhat"]),
-                                        "{}".format(row["ds"]),
+                                        date,
                                         "{}".format("00:00:00"),
-                                        "{}".format(json.dumps(future_dict))))
-
-
-
-
-
-'''
-# The following code should be called when the threads are actually created
-# Wait for all threads to complete
-for t in threads:
-    t.join()
-print("Exiting Main Thread")
-'''
+                                        "{}".format(row["yhat"]),
+                                        "{}".format(row["yhat_lower"]),
+                                        "{}".format(row["yhat_upper"])
+                                        )
+                                )

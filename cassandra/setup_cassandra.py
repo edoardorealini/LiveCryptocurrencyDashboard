@@ -31,7 +31,7 @@ def main():
         # creating the table with the following specs
         create_table_command = """
                 CREATE TABLE IF NOT EXISTS {} (
-                    ts bigint,
+                    ts text,
                     price text,
                     date text,
                     hour text,
@@ -53,7 +53,7 @@ def main():
 
         for i in range(len(df["timestamp"])):
             row = df.iloc[i]
-            session.execute(prepared, (long(row["timestamp"]),
+            session.execute(prepared, ("{}".format(row["timestamp"]),
                                        "{}".format(row["price"]),
                                        "{}".format(row["date"]),
                                        "{}".format(row["hour"]),
