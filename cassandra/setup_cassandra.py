@@ -28,11 +28,22 @@ def main():
 
     for currency in assets:
 
-        create_table_command = "CREATE TABLE IF NOT EXISTS {} (ts text, price text, date text, hour text, future text, PRIMARY KEY (ts))".format(currency)
+        # creating the table with the following specs
+        create_table_command = """
+                CREATE TABLE IF NOT EXISTS {} (
+                    ts bigint,
+                    price text,
+                    date text,
+                    hour text,
+                    yhat text,
+                    yhat_lower text,
+                    yhat_upper text,
+                    PRIMARY KEY (ts, date)
+                )""".format(currency)
 
         session.execute(create_table_command)
 
-        command = "INSERT INTO {} (ts, price, date, hour, future) VALUES (?, ?, ?, ?, ?)".format(currency)
+        command = "INSERT INTO {} (ts, price, date, hour, yhat, yhat_lower, yhat_upper) VALUES (?, ?, ?, ?, ?, ?, ?)".format(currency)
 
         prepared = session.prepare(command)
 
@@ -41,13 +52,12 @@ def main():
         df = pd.read_csv(folder_path)
 
         for i in range(len(df["timestamp"])):
-            # session.execute(query, dict(key="ts%d" % i, price='price', date='date', hour=""))
             row = df.iloc[i]
-            session.execute(prepared, ("{}".format(row["timestamp"]),
+            session.execute(prepared, (long(row["timestamp"]),
                                        "{}".format(row["price"]),
                                        "{}".format(row["date"]),
                                        "{}".format(row["hour"]),
-                                       "?"))
+                                       "?", "?", "?"))
 
 if __name__ == "__main__":
     main()
