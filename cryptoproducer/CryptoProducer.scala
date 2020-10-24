@@ -18,7 +18,7 @@ import MyJsonProtocol._
 
 object CryptoProducer extends App{
 
-  val wait_sec = 1
+  val wait_sec = 2
 
   //this function returns the current timestamp as Long and the current price as Double
   //given the name of the crypto from the api
@@ -45,6 +45,7 @@ object CryptoProducer extends App{
   val producer = new KafkaProducer[String, String](props)
 
   val cryptos: List[String] = List("bitcoin", "ethereum", "tether", "xrp", "litecoin", "cardano", "iota", "eos", "stellar")    
+  //val cryptos: List[String] = List("bitcoin")    
 
   while(true){
 

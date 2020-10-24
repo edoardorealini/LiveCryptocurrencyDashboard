@@ -30,7 +30,7 @@ def date_to_timestamp(date):
     #print(date)
     return int(datetime.datetime.strptime(str(date).replace(" 00:00:00", ""), '%Y-%m-%d').strftime("%s")) * 1000
 
-
+threadLock = threading.Lock()
 
 class CryptoConsumerThread(threading.Thread):
     def __init__(self, crypto):
@@ -56,6 +56,8 @@ class CryptoConsumerThread(threading.Thread):
         )
 
         for message in consumer:
+            threadLock.acquire()
+
             data = get_updated_df(self.crypto)
 
             # Data preprocessing
@@ -118,3 +120,5 @@ class CryptoConsumerThread(threading.Thread):
                                         "{}".format(row["yhat_upper"]),
                                         )
                                 )
+            
+            threadLock.release()

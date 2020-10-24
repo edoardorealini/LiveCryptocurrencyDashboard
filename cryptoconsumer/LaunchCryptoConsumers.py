@@ -11,6 +11,7 @@ if __name__ == "__main__":
         consumer_thread = CryptoConsumerThread(crypto)
 
         print("Consumer Thread Launcher: launching consumer thread for crypto: " + crypto)
+        consumer_thread.setName(crypto + "_thread")
         consumer_thread.start()
         thread_pool.append(consumer_thread)
 
