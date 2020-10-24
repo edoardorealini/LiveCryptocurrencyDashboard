@@ -34,3 +34,4 @@ data/history/eos/json/
 data/history/cardano/json/
 
 lab2_code/
+*.pyc
