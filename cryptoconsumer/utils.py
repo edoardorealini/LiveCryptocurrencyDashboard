@@ -57,7 +57,7 @@ def get_updated_df(currency):
 
     timestamp_curr = int(time.time()) * 1000    # to get milliseconds
 
-    if int(last_ts) < int(timestamp_curr):
+    if int(last_ts) < timestamp_curr:
         # now get the actual price of the currency from the API
         url = "https://api.coincap.io/v2/assets/" + currency + "/history?interval=d1"
         start = "&start=" + str(last_ts)
@@ -88,7 +88,7 @@ def get_updated_df(currency):
                                            "{}".format(hour),
                                            "?", "?", "?"))
 
-    return df.tail(len(df.index) - 7)
+    return df.tail(len(df.index) - 8)
 
 
 # ---------------- MAIN ---------------

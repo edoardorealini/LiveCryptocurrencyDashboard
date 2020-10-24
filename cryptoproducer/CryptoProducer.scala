@@ -18,7 +18,7 @@ import MyJsonProtocol._
 
 object CryptoProducer extends App{
 
-  val wait_sec = 0.8
+  val wait_sec = 1
 
   //this function returns the current timestamp as Long and the current price as Double
   //given the name of the crypto from the api

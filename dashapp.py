@@ -65,8 +65,8 @@ app.layout = html.Div(
                                     html.Div(children=[
                                                 dcc.Graph(id='crypto_plot', config={'displayModeBar': True}),
                                                 dcc.Interval(
-                                                    id='interval_component',
-                                                    interval=3*1000, # in milliseconds
+                                                    id='crypto_interval',
+                                                    interval=1000, # in milliseconds
                                                     n_intervals=0
                                                 )
                                             ])
@@ -79,10 +79,9 @@ app.layout = html.Div(
 
 # ---------------------------------------- CALLBACKS ----------------------------------------
 
-@app.callback(Output('crypto_plot', 'figure'),
+@app.callback(Output('crypto_plot_Test', 'figure'),
               [Input('crypto_selector', 'value')])
 def update_line_crypto(selected_dropdown_value):
-
     query = 'SELECT * FROM ' + selected_dropdown_value
     query_result = session.execute(query, timeout=None)
     data = pd.DataFrame(list(query_result))
@@ -116,6 +115,47 @@ def update_line_crypto(selected_dropdown_value):
 
     return fig
 
+@app.callback(
+    Output('crypto_plot', 'figure'),
+    [ Input('crypto_interval', 'n_intervals'), Input('crypto_selector', 'value')]
+)
+def refresh_plot(n_intervals, selected_dropdown_value):
+    print("Refreshing plot " + str(n_intervals))
+
+    query = 'SELECT * FROM ' + selected_dropdown_value
+    query_result = session.execute(query, timeout=None)
+    data = pd.DataFrame(list(query_result))
+
+    data = data.sort_values(by="date")
+    data = data.tail(30)
+
+    days = data["date"]
+    points_list = data["price"]
+
+    fig = go.Figure()
+
+    fig.add_trace(go.Scatter(x=days, y=points_list,
+                        mode='lines+markers',
+                        name='points',
+                        line_shape='spline',
+                        line_width=3,
+                        marker_size=10,
+                        )
+
+                )
+
+    current_price = points_list.tail(8).to_list()[0]
+
+    fig.update_layout(
+        title= "Current " + selected_dropdown_value + " price: " + str(current_price) + " USD",
+        title_x=0.5,
+        xaxis_title="Day",
+        yaxis_title="Price (USD)",
+        hovermode="x"
+        #transition=trx
+    )
+
+    return fig
 
 # ----------------------------------------    MAIN   ----------------------------------------
 

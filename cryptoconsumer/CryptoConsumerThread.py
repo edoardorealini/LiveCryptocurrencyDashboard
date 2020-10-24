@@ -43,15 +43,7 @@ class CryptoConsumerThread(threading.Thread):
         # Initiating connection to Cassandra and using the keyspace cryptos_keyspace
         cluster = Cluster(["127.0.0.1"], port=9042)
         session = cluster.connect('cryptos_keyspace',wait_for_all_pools=True)
-        session.execute("USE cryptos_keyspace")
-
-        '''
-        # Data loading phase - this will be done by ricks' function with the update control too.
-        # Move this phase into the for loop where the messages are managed
-        query = 'SELECT * FROM ' + self.crypto
-        query_result = session.execute(query, timeout=None)
-        data = pd.DataFrame(list(query_result))
-        '''        
+        session.execute("USE cryptos_keyspace")     
       
         # Setup of Kafka connection
         consumer = KafkaConsumer(
@@ -69,19 +61,21 @@ class CryptoConsumerThread(threading.Thread):
             # Data preprocessing
             data = data[["date", "price"]]
             data = data.rename(columns = {"date": "ds", "price": "y"})
-            data = data.sort_values(by="ds")
+            data = data.sort_values(by="ds", ascending=True)
 
             # For each new message, update the dataset and retrain the whole model
             row = [timestamp_to_date(message.value[0]), message.value[1]]
             new_row = pd.DataFrame([row], columns=["ds", "y"])
 
-            # TODO Check if the data in cassandra is updated, otherwise update it (Rick's function)
-            # Rick's function will also get the newest full dataframe, I will only need to append the last record and train the model. 
-
+            # Rick's function will also get the newest full dataframe, I will only need to append the last record and train the model.
             data = data.append(new_row, ignore_index=True)
 
+            # This filter gives to the model only the last N records, This improves the performance of the system but increases the noise in the prediction.
+            # Using only the last 90 records to make the predictions.
+            data = data.tail(60)
+
             # Creating and fitting the Prophet model
-            prophet = Prophet(daily_seasonality = True, )
+            prophet = Prophet(daily_seasonality = True)
             prophet.fit(data)
 
             # Generating a dataframe containing the predictions of price fluctuation for the followin 7 days
@@ -90,6 +84,19 @@ class CryptoConsumerThread(threading.Thread):
 
             predictions = predictions.tail(7)
             predictions = predictions[["ds", "yhat", "yhat_lower", "yhat_upper"]]
+
+            # store in cassandra the date of today
+            today = timestamp_to_date(message.value[0])
+            cassandra_command_today = "INSERT INTO {} (ts, price, date, hour, yhat, yhat_lower, yhat_upper) VALUES (?, ?, ?, ?, ?, ?, ?)".format(self.crypto)
+            prepared_today = session.prepare(cassandra_command_today)
+
+            session.execute(prepared_today, ("{}".format(date_to_timestamp(today)),
+                                            "{}".format(message.value[1]),
+                                            today,
+                                            "{}".format("00:00:00"),
+                                            "?", "?", "?",
+                                            )
+                            )
 
             #print(predictions)
             # Putting the results back to Cassandra 
@@ -108,6 +115,6 @@ class CryptoConsumerThread(threading.Thread):
                                         "{}".format("00:00:00"),
                                         "{}".format(row["yhat"]),
                                         "{}".format(row["yhat_lower"]),
-                                        "{}".format(row["yhat_upper"])
+                                        "{}".format(row["yhat_upper"]),
                                         )
                                 )
