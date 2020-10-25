@@ -44,8 +44,8 @@ object CryptoProducer extends App{
 
   val producer = new KafkaProducer[String, String](props)
 
-  //val cryptos: List[String] = List("bitcoin", "ethereum", "tether", "xrp", "litecoin", "cardano", "iota", "eos", "stellar")    
-  val cryptos: List[String] = List("bitcoin")    
+  val cryptos: List[String] = List("bitcoin", "ethereum", "tether", "xrp", "litecoin", "cardano", "iota", "eos", "stellar")    
+  //val cryptos: List[String] = List("bitcoin")    
 
   while(true){
 

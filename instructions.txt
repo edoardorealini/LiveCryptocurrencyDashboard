@@ -1,3 +1,19 @@
+HOW TO GET ALL THE NEEDED PYTHON DEPENDENCIES:
+    Prerequisite: having installed virtualenv 
+    Otherwise -> pip3 install virtualenv
+
+Create a new virtual environment by running:
+    virtualenv dataintensive
+
+Activate the environment by running:
+    source dataintensive/bin/activate
+
+Position in the project root folder and install all the requirements by running:
+    pip3 install -r requirements.txt
+
+Now you are ready to execute all the following steps
+
+
 How to run our application:
 
 - Start the zookeeper server with the command:

@@ -36,3 +36,5 @@ data/history/cardano/json/
 lab2_code/
 *.pyc
 fa.css
+
+test/
