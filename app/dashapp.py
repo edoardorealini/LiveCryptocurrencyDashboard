@@ -18,10 +18,11 @@ import pandas as pd
 from datetime import datetime
 
 cluster = Cluster(["127.0.0.1"], port=9042)
-session = cluster.connect('cryptos_keyspace',wait_for_all_pools=True)
+session = cluster.connect('cryptos_keyspace', wait_for_all_pools=True)
 session.execute("USE cryptos_keyspace")
 
-cryptos = ["bitcoin", "ethereum", "tether", "xrp", "litecoin", "cardano", "iota", "eos", "stellar"]
+cryptos = ["bitcoin", "ethereum", "tether", "xrp",
+           "litecoin", "cardano", "iota", "eos", "stellar"]
 
 days = [30, 45, 60, 90, 180, 365]
 
@@ -54,9 +55,10 @@ app.layout = html.Div(
         # Dashboard  Title
         html.H3(children=[
             html.I(className="fa fa-money"),
-            html.B("Real time daily price predictions of cryptocurrency prices", style={"paddingRight": "15px", "paddingLeft": "15px"}),
+            html.B("Real time daily price predictions of cryptocurrency prices", style={
+                   "paddingRight": "15px", "paddingLeft": "15px"}),
             html.I(className="fa fa-line-chart")
-        ], style={"textAlign":"center"}),
+        ], style={"textAlign": "center"}),
 
         html.Br(),
 
@@ -68,35 +70,38 @@ app.layout = html.Div(
                     # crypto selector
                     html.Div([
                         html.Div(children='Crypto selector: ', className="seven columns", style={
-                                "textAlign": "right", "paddingTop": "5px"}),
+                            "textAlign": "right", "paddingTop": "5px"}),
                         html.Div(children=[
-                                dcc.Dropdown(id='crypto_selector_1',
-                                             options=[{'label': crypto.capitalize(), 'value': crypto} for crypto in cryptos],
-                                             value="bitcoin",
-                                             clearable=False,
-                                             searchable=True
-                                            )
-                                        ], className="five columns", style={"textAlign": "center"})
-                    ],className="five columns"),
+                            dcc.Dropdown(id='crypto_selector_1',
+                                         options=[
+                                             {'label': crypto.capitalize(), 'value': crypto} for crypto in cryptos],
+                                         value="bitcoin",
+                                         clearable=False,
+                                         searchable=True
+                                         )
+                        ], className="five columns", style={"textAlign": "center"})
+                    ], className="five columns"),
 
                     # white space
-                    html.Div([],className="two columns"),
+                    html.Div([], className="two columns"),
 
                     # days selector
                     html.Div([
                         html.Div(children='Days interval: ', className="eight columns", style={
-                                "textAlign": "right", "paddingTop": "5px"}),
+                            "textAlign": "right", "paddingTop": "5px"}),
                         html.Div(children=[
-                                dcc.Dropdown(id='days_selector_1',
-                                             options=[{'label': str(day), 'value': day} for day in days],
-                                             value=30,
-                                             clearable=False
-                                            )
-                                        ], className="four columns", style={"textAlign": "center"})
-                    ],className="five columns")
+                            dcc.Dropdown(id='days_selector_1',
+                                         options=[
+                                             {'label': str(day), 'value': day} for day in days],
+                                         value=30,
+                                         clearable=False
+                                         )
+                        ], className="four columns", style={"textAlign": "center"})
+                    ], className="five columns")
                 ], className="row"),
                 # Graph 2
-                html.Div(children=[dcc.Graph(id='crypto_plot_1', config={'displayModeBar': False})], style={"textAlign":"center", "contentAlign":"center"})
+                html.Div(children=[dcc.Graph(id='crypto_plot_1', config={'displayModeBar': False})], style={
+                         "textAlign": "center", "contentAlign": "center"})
 
             ], className="six columns"),
 
@@ -106,35 +111,38 @@ app.layout = html.Div(
                     # crypto selector
                     html.Div([
                         html.Div(children='Crypto selector: ', className="seven columns", style={
-                                "textAlign": "right", "paddingTop": "5px"}),
+                            "textAlign": "right", "paddingTop": "5px"}),
                         html.Div(children=[
-                                dcc.Dropdown(id='crypto_selector_2',
-                                             options=[{'label': crypto.capitalize(), 'value': crypto} for crypto in cryptos],
-                                             value="ethereum",
-                                             clearable=False,
-                                             searchable=True
-                                            )
-                                        ], className="five columns", style={"textAlign": "center"})
-                    ],className="five columns"),
+                            dcc.Dropdown(id='crypto_selector_2',
+                                         options=[
+                                             {'label': crypto.capitalize(), 'value': crypto} for crypto in cryptos],
+                                         value="ethereum",
+                                         clearable=False,
+                                         searchable=True
+                                         )
+                        ], className="five columns", style={"textAlign": "center"})
+                    ], className="five columns"),
 
                     # white space
-                    html.Div([],className="two columns"),
+                    html.Div([], className="two columns"),
 
                     # days selector
                     html.Div([
                         html.Div(children='Days interval: ', className="eight columns", style={
-                                "textAlign": "right", "paddingTop": "5px"}),
+                            "textAlign": "right", "paddingTop": "5px"}),
                         html.Div(children=[
-                                dcc.Dropdown(id='days_selector_2',
-                                             options=[{'label': str(day), 'value': day} for day in days],
-                                             value=30,
-                                             clearable=False
-                                            )
-                                        ], className="four columns", style={"textAlign": "center"})
-                    ],className="five columns")
+                            dcc.Dropdown(id='days_selector_2',
+                                         options=[
+                                             {'label': str(day), 'value': day} for day in days],
+                                         value=30,
+                                         clearable=False
+                                         )
+                        ], className="four columns", style={"textAlign": "center"})
+                    ], className="five columns")
                 ], className="row"),
                 # Graph 1
-                html.Div(children=[dcc.Graph(id='crypto_plot_2', config={'displayModeBar': False})], style={"textAlign":"center", "contentAlign":"center"})
+                html.Div(children=[dcc.Graph(id='crypto_plot_2', config={'displayModeBar': False})], style={
+                         "textAlign": "center", "contentAlign": "center"})
             ], className="six columns")
         ], className="row"),
 
@@ -148,35 +156,38 @@ app.layout = html.Div(
                     # crypto selector
                     html.Div([
                         html.Div(children='Crypto selector: ', className="seven columns", style={
-                                "textAlign": "right", "paddingTop": "5px"}),
+                            "textAlign": "right", "paddingTop": "5px"}),
                         html.Div(children=[
-                                dcc.Dropdown(id='crypto_selector_3',
-                                             options=[{'label': crypto.capitalize(), 'value': crypto} for crypto in cryptos],
-                                             value="xrp",
-                                             clearable=False,
-                                             searchable=True
-                                            )
-                                        ], className="five columns", style={"textAlign": "center"})
-                    ],className="five columns"),
+                            dcc.Dropdown(id='crypto_selector_3',
+                                         options=[
+                                             {'label': crypto.capitalize(), 'value': crypto} for crypto in cryptos],
+                                         value="xrp",
+                                         clearable=False,
+                                         searchable=True
+                                         )
+                        ], className="five columns", style={"textAlign": "center"})
+                    ], className="five columns"),
 
                     # white space
-                    html.Div([],className="two columns"),
+                    html.Div([], className="two columns"),
 
                     # days selector
                     html.Div([
                         html.Div(children='Days interval: ', className="eight columns", style={
-                                "textAlign": "right", "paddingTop": "5px"}),
+                            "textAlign": "right", "paddingTop": "5px"}),
                         html.Div(children=[
-                                dcc.Dropdown(id='days_selector_3',
-                                             options=[{'label': str(day), 'value': day} for day in days],
-                                             value=30,
-                                             clearable=False
-                                            )
-                                        ], className="four columns", style={"textAlign": "center"})
-                    ],className="five columns")
+                            dcc.Dropdown(id='days_selector_3',
+                                         options=[
+                                             {'label': str(day), 'value': day} for day in days],
+                                         value=30,
+                                         clearable=False
+                                         )
+                        ], className="four columns", style={"textAlign": "center"})
+                    ], className="five columns")
                 ], className="row"),
                 # Graph 3
-                html.Div(children=[dcc.Graph(id='crypto_plot_3', config={'displayModeBar': False})], style={"textAlign":"center", "contentAlign":"center"})
+                html.Div(children=[dcc.Graph(id='crypto_plot_3', config={'displayModeBar': False})], style={
+                         "textAlign": "center", "contentAlign": "center"})
 
             ], className="six columns"),
 
@@ -186,45 +197,48 @@ app.layout = html.Div(
                     # crypto selector
                     html.Div([
                         html.Div(children='Crypto selector: ', className="seven columns", style={
-                                "textAlign": "right", "paddingTop": "5px"}),
+                            "textAlign": "right", "paddingTop": "5px"}),
                         html.Div(children=[
-                                dcc.Dropdown(id='crypto_selector_4',
-                                             options=[{'label': crypto.capitalize(), 'value': crypto} for crypto in cryptos],
-                                             value="tether",
-                                             clearable=False,
-                                             searchable=True
-                                            )
-                                        ], className="five columns", style={"textAlign": "center"})
-                    ],className="five columns"),
+                            dcc.Dropdown(id='crypto_selector_4',
+                                         options=[
+                                             {'label': crypto.capitalize(), 'value': crypto} for crypto in cryptos],
+                                         value="tether",
+                                         clearable=False,
+                                         searchable=True
+                                         )
+                        ], className="five columns", style={"textAlign": "center"})
+                    ], className="five columns"),
 
                     # white space
-                    html.Div([],className="two columns"),
+                    html.Div([], className="two columns"),
 
                     # days selector
                     html.Div([
                         html.Div(children='Days interval: ', className="eight columns", style={
-                                "textAlign": "right", "paddingTop": "5px"}),
+                            "textAlign": "right", "paddingTop": "5px"}),
                         html.Div(children=[
-                                dcc.Dropdown(id='days_selector_4',
-                                             options=[{'label': str(day), 'value': day} for day in days],
-                                             value=30,
-                                             clearable=False
-                                            )
-                                        ], className="four columns", style={"textAlign": "center"})
-                    ],className="five columns")
+                            dcc.Dropdown(id='days_selector_4',
+                                         options=[
+                                             {'label': str(day), 'value': day} for day in days],
+                                         value=30,
+                                         clearable=False
+                                         )
+                        ], className="four columns", style={"textAlign": "center"})
+                    ], className="five columns")
                 ], className="row"),
                 # Graph 4
-                html.Div(children=[dcc.Graph(id='crypto_plot_4', config={'displayModeBar': False})], style={"textAlign":"center", "contentAlign":"center"})
+                html.Div(children=[dcc.Graph(id='crypto_plot_4', config={'displayModeBar': False})], style={
+                         "textAlign": "center", "contentAlign": "center"})
             ], className="six columns")
         ], className="row"),
 
         # Trigger that refreshes the page
         html.Div(children=[dcc.Interval(
                  id='crypto_interval',
-                 interval=2500, # in milliseconds
+                 interval=2500,  # in milliseconds
                  n_intervals=0)]
-        )
-        ], style={'maxWidth': '94vw', 'maxHeight': '100vh', "marginRight": "auto", "marginLeft": "auto", "overflow":"hidden"})
+                 )
+    ], style={'maxWidth': '94vw', 'maxHeight': '100vh', "marginRight": "auto", "marginLeft": "auto", "overflow": "hidden"})
 
 
 # ---------------------------------------- CALLBACKS ----------------------------------------
@@ -232,12 +246,11 @@ app.layout = html.Div(
 # first graph
 @app.callback(
     Output('crypto_plot_1', 'figure'),
-    [Input('crypto_interval', 'n_intervals'), Input('crypto_selector_1', 'value'), Input('days_selector_1', 'value')]
+    [Input('crypto_interval', 'n_intervals'), Input(
+        'crypto_selector_1', 'value'), Input('days_selector_1', 'value')]
 )
 def refresh_plot(n_intervals, selected_crypto, selected_day):
     print("Refreshing plot " + str(n_intervals))
-
-    days_predicted = 7
 
     query = 'SELECT * FROM ' + selected_crypto
     query_result = session.execute(query, timeout=None)
@@ -261,49 +274,49 @@ def refresh_plot(n_intervals, selected_crypto, selected_day):
     fig = go.Figure()
 
     fig.add_trace(go.Scatter(x=days, y=points_list,
-                        mode='lines+markers',
-                        name='Expected value',
-                        line_shape='spline',
-                        line_width=1.5,
-                        marker_size=4,
-                        marker_color=crypto_colors[selected_crypto]
-                        )
+                             mode='lines+markers',
+                             name='Expected value',
+                             line_shape='spline',
+                             line_width=1.5,
+                             marker_size=4,
+                             marker_color=crypto_colors[selected_crypto]
+                             )
 
-                )
+                  )
 
     fig.add_trace(go.Scatter(x=days, y=y_lower,
-                        mode='lines+markers',
-                        name='Min',
-                        line_shape='spline',
-                        line_width=1.5,
-                        marker_size=4,
-                        marker_color=crypto_colors["max"]
-                        )
-                 ),
+                             mode='lines+markers',
+                             name='Min',
+                             line_shape='spline',
+                             line_width=1.5,
+                             marker_size=4,
+                             marker_color=crypto_colors["max"]
+                             )
+                  ),
 
     fig.add_trace(go.Scatter(x=days, y=y_upper,
-                        mode='lines+markers',
-                        name='Max',
-                        line_shape='spline',
-                        line_width=1.5,
-                        marker_size=4,
-                        marker_color=crypto_colors["min"]
-                        )
-                )
+                             mode='lines+markers',
+                             name='Max',
+                             line_shape='spline',
+                             line_width=1.5,
+                             marker_size=4,
+                             marker_color=crypto_colors["min"]
+                             )
+                  )
 
     current_price = points_list.tail(8).to_list()[0]
 
     fig.update_layout(
-    title={
-        'text': "Current <b>" + selected_crypto.capitalize() + "</b> price: " + str(current_price) + " USD",
-        'y':0.96,
-        'x':0.45,
-        'xanchor': 'center',
-        'yanchor': 'top'},
+        title={
+            'text': "Current <b>" + selected_crypto.capitalize() + "</b> price: " + str(current_price) + " USD",
+            'y': 0.96,
+            'x': 0.45,
+            'xanchor': 'center',
+            'yanchor': 'top'},
         xaxis_title="Days",
         yaxis_title="Price (USD)",
         hovermode="x",
-        margin_t = 34,
+        margin_t=34,
     )
 
     return fig
@@ -312,12 +325,12 @@ def refresh_plot(n_intervals, selected_crypto, selected_day):
 # second graph
 @app.callback(
     Output('crypto_plot_2', 'figure'),
-    [Input('crypto_interval', 'n_intervals'), Input('crypto_selector_2', 'value'), Input('days_selector_2', 'value')]
+    [Input('crypto_interval', 'n_intervals'), Input(
+        'crypto_selector_2', 'value'), Input('days_selector_2', 'value')]
 )
+
 def refresh_plot(n_intervals, selected_crypto, selected_day):
     print("Refreshing plot " + str(n_intervals))
-
-    days_predicted = 7
 
     query = 'SELECT * FROM ' + selected_crypto
     query_result = session.execute(query, timeout=None)
@@ -341,45 +354,45 @@ def refresh_plot(n_intervals, selected_crypto, selected_day):
     fig = go.Figure()
 
     fig.add_trace(go.Scatter(x=days, y=points_list,
-                        mode='lines+markers',
-                        name='Expected value',
-                        line_shape='spline',
-                        line_width=1.5,
-                        marker_size=4,
-                        marker_color=crypto_colors[selected_crypto]
-                        )
+                             mode='lines+markers',
+                             name='Expected value',
+                             line_shape='spline',
+                             line_width=1.5,
+                             marker_size=4,
+                             marker_color=crypto_colors[selected_crypto]
+                             )
 
-                )
+                  )
 
     fig.add_trace(go.Scatter(x=days, y=y_lower,
-                        mode='lines+markers',
-                        name='Min',
-                        line_shape='spline',
-                        line_width=1.5,
-                        marker_size=4,
-                        marker_color=crypto_colors["max"]
-                        )
-                 ),
+                             mode='lines+markers',
+                             name='Min',
+                             line_shape='spline',
+                             line_width=1.5,
+                             marker_size=4,
+                             marker_color=crypto_colors["max"]
+                             )
+                  ),
 
     fig.add_trace(go.Scatter(x=days, y=y_upper,
-                        mode='lines+markers',
-                        name='Max',
-                        line_shape='spline',
-                        line_width=1.5,
-                        marker_size=4,
-                        marker_color=crypto_colors["min"]
-                        )
-                )
+                             mode='lines+markers',
+                             name='Max',
+                             line_shape='spline',
+                             line_width=1.5,
+                             marker_size=4,
+                             marker_color=crypto_colors["min"]
+                             )
+                  )
 
     current_price = points_list.tail(8).to_list()[0]
 
     fig.update_layout(
-    title={
-        'text': "Current <b>" + selected_crypto.capitalize() + "</b> price: " + str(current_price) + " USD",
-        'y':0.96,
-        'x':0.45,
-        'xanchor': 'center',
-        'yanchor': 'top'},
+        title={
+            'text': "Current <b>" + selected_crypto.capitalize() + "</b> price: " + str(current_price) + " USD",
+            'y': 0.96,
+            'x': 0.45,
+            'xanchor': 'center',
+            'yanchor': 'top'},
         xaxis_title="Days",
         yaxis_title="Price (USD)",
         hovermode="x",
@@ -392,12 +405,12 @@ def refresh_plot(n_intervals, selected_crypto, selected_day):
 # third graph
 @app.callback(
     Output('crypto_plot_3', 'figure'),
-    [Input('crypto_interval', 'n_intervals'), Input('crypto_selector_3', 'value'), Input('days_selector_3', 'value')]
+    [Input('crypto_interval', 'n_intervals'), Input(
+        'crypto_selector_3', 'value'), Input('days_selector_3', 'value')]
 )
+
 def refresh_plot(n_intervals, selected_crypto, selected_day):
     print("Refreshing plot " + str(n_intervals))
-
-    days_predicted = 7
 
     query = 'SELECT * FROM ' + selected_crypto
     query_result = session.execute(query, timeout=None)
@@ -421,45 +434,45 @@ def refresh_plot(n_intervals, selected_crypto, selected_day):
     fig = go.Figure()
 
     fig.add_trace(go.Scatter(x=days, y=points_list,
-                        mode='lines+markers',
-                        name='Expected value',
-                        line_shape='spline',
-                        line_width=1.5,
-                        marker_size=4,
-                        marker_color=crypto_colors[selected_crypto]
-                        )
+                             mode='lines+markers',
+                             name='Expected value',
+                             line_shape='spline',
+                             line_width=1.5,
+                             marker_size=4,
+                             marker_color=crypto_colors[selected_crypto]
+                             )
 
-                )
+                  )
 
     fig.add_trace(go.Scatter(x=days, y=y_lower,
-                        mode='lines+markers',
-                        name='Min',
-                        line_shape='spline',
-                        line_width=1.5,
-                        marker_size=4,
-                        marker_color=crypto_colors["max"]
-                        )
-                 ),
+                             mode='lines+markers',
+                             name='Min',
+                             line_shape='spline',
+                             line_width=1.5,
+                             marker_size=4,
+                             marker_color=crypto_colors["max"]
+                             )
+                  ),
 
     fig.add_trace(go.Scatter(x=days, y=y_upper,
-                        mode='lines+markers',
-                        name='Max',
-                        line_shape='spline',
-                        line_width=1.5,
-                        marker_size=4,
-                        marker_color=crypto_colors["min"]
-                        )
-                )
+                             mode='lines+markers',
+                             name='Max',
+                             line_shape='spline',
+                             line_width=1.5,
+                             marker_size=4,
+                             marker_color=crypto_colors["min"]
+                             )
+                  )
 
     current_price = points_list.tail(8).to_list()[0]
 
     fig.update_layout(
-    title={
-        'text': "Current <b>" + selected_crypto.capitalize() + "</b> price: " + str(current_price) + " USD",
-        'y':0.96,
-        'x':0.45,
-        'xanchor': 'center',
-        'yanchor': 'top'},
+        title={
+            'text': "Current <b>" + selected_crypto.capitalize() + "</b> price: " + str(current_price) + " USD",
+            'y': 0.96,
+            'x': 0.45,
+            'xanchor': 'center',
+            'yanchor': 'top'},
         xaxis_title="Days",
         yaxis_title="Price (USD)",
         hovermode="x",
@@ -472,12 +485,11 @@ def refresh_plot(n_intervals, selected_crypto, selected_day):
 # fourth graph
 @app.callback(
     Output('crypto_plot_4', 'figure'),
-    [Input('crypto_interval', 'n_intervals'), Input('crypto_selector_4', 'value'), Input('days_selector_4', 'value')]
+    [Input('crypto_interval', 'n_intervals'), Input(
+        'crypto_selector_4', 'value'), Input('days_selector_4', 'value')]
 )
 def refresh_plot(n_intervals, selected_crypto, selected_day):
     print("Refreshing plot " + str(n_intervals))
-
-    days_predicted = 7
 
     query = 'SELECT * FROM ' + selected_crypto
     query_result = session.execute(query, timeout=None)
@@ -501,45 +513,45 @@ def refresh_plot(n_intervals, selected_crypto, selected_day):
     fig = go.Figure()
 
     fig.add_trace(go.Scatter(x=days, y=points_list,
-                        mode='lines+markers',
-                        name='Expected value',
-                        line_shape='spline',
-                        line_width=1.5,
-                        marker_size=4,
-                        marker_color=crypto_colors[selected_crypto]
-                        )
+                             mode='lines+markers',
+                             name='Expected value',
+                             line_shape='spline',
+                             line_width=1.5,
+                             marker_size=4,
+                             marker_color=crypto_colors[selected_crypto]
+                             )
 
-                )
+                  )
 
     fig.add_trace(go.Scatter(x=days, y=y_lower,
-                        mode='lines+markers',
-                        name='Min',
-                        line_shape='spline',
-                        line_width=1.5,
-                        marker_size=4,
-                        marker_color=crypto_colors["max"]
-                        )
-                 ),
+                             mode='lines+markers',
+                             name='Min',
+                             line_shape='spline',
+                             line_width=1.5,
+                             marker_size=4,
+                             marker_color=crypto_colors["max"]
+                             )
+                  ),
 
     fig.add_trace(go.Scatter(x=days, y=y_upper,
-                        mode='lines+markers',
-                        name='Max',
-                        line_shape='spline',
-                        line_width=1.5,
-                        marker_size=4,
-                        marker_color=crypto_colors["min"]
-                        )
-                )
+                             mode='lines+markers',
+                             name='Max',
+                             line_shape='spline',
+                             line_width=1.5,
+                             marker_size=4,
+                             marker_color=crypto_colors["min"]
+                             )
+                  )
 
     current_price = points_list.tail(8).to_list()[0]
 
     fig.update_layout(
-    title={
-        'text': "Current <b>" + selected_crypto.capitalize() + "</b> price: " + str(current_price) + " USD",
-        'y':0.96,
-        'x':0.45,
-        'xanchor': 'center',
-        'yanchor': 'top'},
+        title={
+            'text': "Current <b>" + selected_crypto.capitalize() + "</b> price: " + str(current_price) + " USD",
+            'y': 0.96,
+            'x': 0.45,
+            'xanchor': 'center',
+            'yanchor': 'top'},
         xaxis_title="Days",
         yaxis_title="Price (USD)",
         hovermode="x",
@@ -549,6 +561,7 @@ def refresh_plot(n_intervals, selected_crypto, selected_day):
     return fig
 
 # ----------------------------------------    MAIN   ----------------------------------------
+
 
 # Run the app
 if __name__ == '__main__':
