@@ -18,5 +18,3 @@ if __name__ == "__main__":
     print("Consumer Thread Launcher: Waiting for all threads termination")
     for thread in thread_pool:
         thread.join()
-
-   
