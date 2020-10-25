@@ -28,6 +28,8 @@ def main():
 
     for currency in assets:
 
+        print("Creating table " + currency + " in cassandra keyspace " + KEYSPACE + " . . .")
+
         # creating the table with the following specs
         create_table_command = """
                 CREATE TABLE IF NOT EXISTS {} (
@@ -42,6 +44,8 @@ def main():
                 )""".format(currency)
 
         session.execute(create_table_command)
+
+        print("Table created. Now filling it with historical data . . .")
 
         command = "INSERT INTO {} (ts, price, date, hour, yhat, yhat_lower, yhat_upper) VALUES (?, ?, ?, ?, ?, ?, ?)".format(currency)
 
@@ -58,6 +62,10 @@ def main():
                                        "{}".format(row["date"]),
                                        "{}".format(row["hour"]),
                                        "?", "?", "?"))
+
+        print("Table " + currency + " filled.\n")
+
+    print("Setup CASSANDRA completed!")
 
 if __name__ == "__main__":
     main()

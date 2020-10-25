@@ -3,7 +3,7 @@ import time
 import datetime
 import json
 
-import pandas as pd 
+import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 
@@ -43,8 +43,8 @@ class CryptoConsumerThread(threading.Thread):
         # Initiating connection to Cassandra and using the keyspace cryptos_keyspace
         cluster = Cluster(["127.0.0.1"], port=9042)
         session = cluster.connect('cryptos_keyspace',wait_for_all_pools=True)
-        session.execute("USE cryptos_keyspace")     
-      
+        session.execute("USE cryptos_keyspace")
+
         # Setup of Kafka connection
         consumer = KafkaConsumer(
             self.crypto,
@@ -74,7 +74,7 @@ class CryptoConsumerThread(threading.Thread):
 
             # This filter gives to the model only the last N records, This improves the performance of the system but increases the noise in the prediction.
             # Using only the last 90 records to make the predictions.
-            data = data.tail(60)
+            data = data.tail(90)
 
             # Creating and fitting the Prophet model
             prophet = Prophet(daily_seasonality = True)
@@ -101,7 +101,7 @@ class CryptoConsumerThread(threading.Thread):
                             )
 
             #print(predictions)
-            # Putting the results back to Cassandra 
+            # Putting the results back to Cassandra
             # Putting results into Cassandra, in the future field of the interested days.
             cassandra_command = "INSERT INTO {} (ts, price, date, hour, yhat, yhat_lower, yhat_upper) VALUES (?, ?, ?, ?, ?, ?, ?)".format(self.crypto)
             prepared = session.prepare(cassandra_command)
@@ -120,5 +120,5 @@ class CryptoConsumerThread(threading.Thread):
                                         "{}".format(row["yhat_upper"]),
                                         )
                                 )
-            
+
             threadLock.release()
