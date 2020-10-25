@@ -1,0 +1,25 @@
+How to run our application:
+
+- Start the zookeeper server with the command:
+    zookeeper-server-start.sh $KAFKA_HOME/config/zookeeper.properties
+
+- Start Kafka with the following command:
+    $KAFKA_HOME/bin/kafka-server-start.sh $KAFKA_HOME/config/server.properties
+
+- Start Cassandra with the following Command:
+    cassandra -f
+
+- Run the script setup_cassandra.py in the folder /cassandra/ (aggiungere log)
+    python3 setup_cassandra.py
+
+- Run the producer:
+    Enter the directory /cryptoproducer
+    run the command: 
+    sbt run
+
+- Run the consumer(s):
+    Enter the folder /cryptoconsumer and run command:
+    python3 LaunchCryptoConsumers.py
+
+- Run the dash app in the project root folder:
+    python3 dashapp.py
