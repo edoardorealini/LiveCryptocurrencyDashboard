@@ -10,6 +10,8 @@ project/plugins/project/
 .history
 .cache
 .lib/
+
+# ignore big csv
 data/history/bitcoin/bitcoin.csv
 data/history/bitcoin-cash/bitcoin-cash.csv
 data/history/cardano/cardano.csv
@@ -32,6 +34,30 @@ data/history/tether/json/
 data/history/iota/json/
 data/history/eos/json/
 data/history/cardano/json/
+
+# ignore big csv
+app/data/history/bitcoin/bitcoin.csv
+app/data/history/bitcoin-cash/bitcoin-cash.csv
+app/data/history/cardano/cardano.csv
+app/data/history/eos/eos.csv
+app/data/history/ethereum/ethereum.csv
+app/data/history/iota/iota.csv
+app/data/history/litecoin/litecoin.csv
+app/data/history/stellar/stellar.csv
+app/data/history/tether/tether.csv
+app/data/history/xrp/xrp.csv
+
+# ignore json folders, too big
+app/data/history/bitcoin/json/
+app/data/history/ethereum/json/
+app/data/history/xrp/json/
+app/data/history/litecoin/json/
+app/data/history/stellar/json/
+app/data/history/bitcoin-cash/json/
+app/data/history/tether/json/
+app/data/history/iota/json/
+app/data/history/eos/json/
+app/data/history/cardano/json/
 
 lab2_code/
 *.pyc
