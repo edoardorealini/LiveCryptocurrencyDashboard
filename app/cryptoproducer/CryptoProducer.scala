@@ -18,7 +18,7 @@ import MyJsonProtocol._
 
 object CryptoProducer extends App{
 
-  val wait_sec = 2
+  var wait_sec = 1
 
   //this function returns the current timestamp as Long and the current price as Double
   //given the name of the crypto from the api
@@ -45,20 +45,37 @@ object CryptoProducer extends App{
   val producer = new KafkaProducer[String, String](props)
 
   val cryptos: List[String] = List("bitcoin", "ethereum", "tether", "xrp", "litecoin", "cardano", "iota", "eos", "stellar")    
-  //val cryptos: List[String] = List("bitcoin")    
+  //val cryptos: List[String] = List("bitcoin") 
+
+  var count = 0   
 
   while(true){
 
     for(crypto <- cryptos){
 
-      val time_price = getCurrentPrice(crypto)
-      val tuple = time_price._1 + "," + time_price._2
-      println(crypto + ": " + tuple)
+      try{
+        val time_price = getCurrentPrice(crypto)
+        count = count + 1;
+        val tuple = time_price._1 + "," + time_price._2
+        println(crypto + ": \t" + tuple)
       
-      val data = new ProducerRecord[String, String](crypto, null, tuple)
-      producer.send(data)
+        val data = new ProducerRecord[String, String](crypto, null, tuple)
+        producer.send(data)
 
-      Thread.sleep((wait_sec*1000).toLong)
+        Thread.sleep((wait_sec*1000).toLong)
+      }
+      catch{
+        case error: Throwable => {
+          //error.printStackTrace
+          print("Number of calls: ")
+          print(count)
+          println("[ERROR MANAGER] API calls error, waiting and slowly restarting.")
+          println("[ERROR MANAGER] Waiting 20 seconds")
+          Thread.sleep((20*1000).toLong)
+          println("[ERROR MANAGER] Increasing the waiting time between calls.")
+          wait_sec = wait_sec + 1
+        }
+      }    
 
     }
 
