@@ -238,7 +238,7 @@ app.layout = html.Div(
                  interval=2500,  # in milliseconds
                  n_intervals=0)]
                  )
-    ], style={'maxWidth': '94vw', 'maxHeight': '100vh', "marginRight": "auto", "marginLeft": "auto", "overflow": "hidden"})
+    ], style={'maxWidth': '94vw', "marginRight": "auto", "marginLeft": "auto", "overflow": "hidden"})
 
 
 # ---------------------------------------- CALLBACKS ----------------------------------------
